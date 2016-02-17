@@ -4,7 +4,7 @@ angular.module('leean.views.about', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/about', {
-    templateUrl: 'views/about/about.html',
+    templateUrl: 'templates/about/about.html',
     controller: 'AboutCtrl'
   });
 }])
