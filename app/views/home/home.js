@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.views.home', ['ngRoute'])
+angular.module('leean.views.home', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {

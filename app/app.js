@@ -1,14 +1,13 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
+angular.module('leean', [
   'ngRoute',
-  'myApp.views.home',
-  'myApp.views.about',
-  'myApp.version'
+  'leean.views.home',
+  'leean.views.about'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.otherwise({redirectTo: '/'});
 }]);
 
 //require('./view1');
