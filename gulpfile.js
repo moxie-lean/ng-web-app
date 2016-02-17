@@ -153,33 +153,32 @@ gulp.task('styles:combine', function(){
 //    .pipe(gulp.dest( sourcePath + '/js'));
 //};
 //
-//// Files to inspect in order to follow the same standard
-//var jsFiles = [
-//  sourcePath + 'js/app/**/*.js',
-//  sourcePath + 'js/app/**/*.jsx'
-//];
-//
-//// Tasks that are handle the lints without breaking the gulp report
-//gulp.task('js:lint', ['js:cs']);
-//
-//// Gulp taks to analyze the code using JS CS rules witouth breaking gulp
-//gulp.task('js:cs', function() {
-//  return gulp.src( jsFiles )
-//    .pipe(eslint())
-//    .pipe(eslint.format())
-//    .pipe( notify({ message: 'JS Completed', onLast: true }) );
-//});
-//
-//// Tasks for continuous integration using the JS CS rules
-//gulp.task('js:cs-ci', function() {
-//  return gulp.src( jsFiles )
-//    .pipe(eslint())
-//    .pipe(eslint.format())
-//    .pipe(eslint.failAfterError());
-//});
-//
-//// Group of JS tasks for continuous integration
-//gulp.task('js:ci', ['js:cs-ci']);
+// Files to inspect in order to follow the same standard
+var jsFiles = [
+  projectPath + '**/*.js'
+];
+
+// Tasks that are handle the lints without breaking the gulp report
+gulp.task('js:lint', ['js:cs']);
+
+// Gulp taks to analyze the code using JS CS rules witouth breaking gulp
+gulp.task('js:cs', function() {
+  return gulp.src( jsFiles )
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe( notify({ message: 'JS Completed', onLast: true }) );
+});
+
+// Tasks for continuous integration using the JS CS rules
+gulp.task('js:cs-ci', function() {
+  return gulp.src( jsFiles )
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+});
+
+// Group of JS tasks for continuous integration
+gulp.task('js:ci', ['js:cs-ci']);
 
 /******************************************************************************
  | >   TEMPLATE TASKS
