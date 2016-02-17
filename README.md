@@ -1,4 +1,4 @@
-# leean-webapp
+# Moxie's Leean Web App
 Starter Web App based on the modular/atomic Leean concept.
 
 Based on the [Angular Seed](https://github.com/angular/angular-seed) project. Follow the link to check the documentation.
@@ -32,12 +32,12 @@ First you need to globally install the JSON Server if you don't already have it:
 npm install -g json-server
 ```
 
-Then design your API structure and add your fake JSON data to ```json-data.json``` (sample file included with this project for you to edit).
+Then design your API structure and add your fake JSON data to ```config/json/db.json``` (sample file included with this project for you to edit).
  
 Finally run the following in the project's root folder to start the server:
 
 ```
-json-server --watch json-data.json
+json-server --watch config/json/db.json
 ```
 
 Your API will be available at [http://localhost:3000/](http://localhost:3000/), e.g. [http://localhost:3000/posts/1](http://localhost:3000/posts/1)

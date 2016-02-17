@@ -6,3 +6,4 @@ tmp
 .DS_Store
 .idea
 www/build/
+npm-debug.log
