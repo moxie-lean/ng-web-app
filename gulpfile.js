@@ -20,6 +20,7 @@ var eslint = require('gulp-eslint');
 var templateCache = require('gulp-angular-templatecache');
 var env = require('gulp-env');
 var fs = require('fs');
+var sassLint = require('gulp-sass-lint');
 
 /******************************************************************************
  | >   PROJECT VARIABLES
@@ -90,6 +91,16 @@ gulp.task('styles:combine', function(){
     ))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(outputPath + 'css'));
+});
+
+/**
+ *  Check the SASS style.
+ */
+gulp.task('styles:ci', function () {
+  gulp.src(projectPath + '**/*.s+(a|c)ss')
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
 });
 
 /******************************************************************************
