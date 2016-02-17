@@ -188,7 +188,7 @@ gulp.task('tc', function () {
  ******************************************************************************/
 // Alias to the watch:all task
 gulp.task('watch', ['watch:all']);
-gulp.task('watch:all', ['watch:js', 'watch:sass']);
+gulp.task('watch:all', ['watch:js', 'watch:sass', 'watch:templates']);
 
 gulp.task('watch:js', ['js'], function(){
   gulp.watch(sourcePath + 'js/app/**/*.js', ['js']);
@@ -196,6 +196,10 @@ gulp.task('watch:js', ['js'], function(){
 
 gulp.task('watch:sass', ['styles'], function(){
   gulp.watch(projectPath + '**/*.scss', ['styles']);
+});
+
+gulp.task('watch:templates', ['tc'], function(){
+  gulp.watch(projectPath + '**/*.html', ['tc']);
 });
 
 /******************************************************************************
