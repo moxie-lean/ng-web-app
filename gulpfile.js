@@ -17,6 +17,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var gutil = require('gulp-util');
 var eslint = require('gulp-eslint');
+var templateCache = require('gulp-angular-templatecache');
 /******************************************************************************
  | >   PROJECT VARIABLES
  ******************************************************************************/
@@ -173,9 +174,19 @@ gulp.task('styles:combine', function(){
 //gulp.task('js:ci', ['js:cs-ci']);
 
 /******************************************************************************
+ | >   TEMPLATE TASKS
+ ******************************************************************************/
+
+gulp.task('tc', function () {
+  return gulp.src(projectPath + '**/*.html')
+    .pipe(templateCache())
+    .pipe(gulp.dest(outputPath + 'js'));
+});
+
+/******************************************************************************
  | >   WATCH TASKS
  ******************************************************************************/
-// Alias to the watcH:all task
+// Alias to the watch:all task
 gulp.task('watch', ['watch:all']);
 gulp.task('watch:all', ['watch:js', 'watch:sass']);
 
