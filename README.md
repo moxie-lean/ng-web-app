@@ -25,7 +25,7 @@ npm install
 
 [Download NPM / NodeJS](https://nodejs.org) first if you don't already have it installed globally.
 
-### Create Fake API data
+### Create Fake API Data
 First you need to globally install the JSON Server if you don't already have it:
 
 ```
@@ -43,3 +43,8 @@ json-server --watch config/json/db.json
 Your API will be available at [http://localhost:3000/](http://localhost:3000/), e.g. [http://localhost:3000/posts/1](http://localhost:3000/posts/1)
 
 See the [JSON Server Documentation](https://github.com/typicode/json-server) for more options.
+
+### Set-up ENV Variables
+Add and edit the production settings in ```config/env.prod.json```. These are committed to git.
+
+You can create a copy called ```config/env.local.json``` which will be loaded instead if it exists. This is not committed to git (it's in .gitignore).

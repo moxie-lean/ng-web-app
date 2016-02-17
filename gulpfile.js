@@ -1,5 +1,5 @@
-
 'use strict';
+
 /******************************************************************************
  | >   PLUGINS
  ******************************************************************************/
@@ -18,13 +18,21 @@ var sass = require('gulp-sass');
 var gutil = require('gulp-util');
 var eslint = require('gulp-eslint');
 var templateCache = require('gulp-angular-templatecache');
+var env = require('gulp-env');
+var fs = require('fs');
+
 /******************************************************************************
  | >   PROJECT VARIABLES
  ******************************************************************************/
 var projectPath = 'app/';
 var outputPath = 'www/build/';
-//var sourcePath = project + '/assets/';
-//var bower = project + '/bower_components/';
+var configPath = 'config/';
+
+var envFile = configPath + 'env.prod.json';
+if( fs.existsSync(configPath + 'env.local.json') ) {
+  envFile = configPath + 'env.local.json';
+}
+console.log('Using env file: ' + envFile);
 
 /******************************************************************************
  | >  JS and CSS task

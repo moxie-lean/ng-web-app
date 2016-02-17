@@ -7,3 +7,4 @@ tmp
 .idea
 www/build/
 npm-debug.log
+config/*.local.*
