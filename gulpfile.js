@@ -1,8 +1,5 @@
 'use strict';
 
-/******************************************************************************
- | >   PLUGINS
- ******************************************************************************/
 var gulp = require('gulp');
 var babelify = require('babelify');
 var autoprefixer = require('gulp-autoprefixer');
@@ -57,8 +54,7 @@ gulp.task('styles', ['styles:minify'], function() {
     .pipe( notify({
       title: 'Styles completed',
       message: 'The Sass files has been compiled into CSS',
-      onLast: true,
-      icon: './assets/images/notify/sass.png',
+      onLast: true
     }));
 });
 
@@ -220,10 +216,7 @@ gulp.task('watch:templates', ['tc'], function(){
   gulp.watch(projectPath + '**/*.html', ['tc']);
 });
 
-/******************************************************************************
- | >   CONTINUOUS INTEGRATION TASK
- ******************************************************************************/
-gulp.task('ci', ['js:ci', 'php:ci']);
+gulp.task('ci', ['js:ci', 'styles:ci']);
 
 /******************************************************************************
  | >   DEFAULT TASK
