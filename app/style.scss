@@ -9,6 +9,14 @@
 --------------------------------------------------------------*/
 @import "../bower_components/normalize-scss/normalize.scss";
 
+/*--------------------------------------------------------------
+2.0 Bourbon, Neat
+--------------------------------------------------------------*/
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../bower_components/neat/app/assets/stylesheets/neat";
+@import "grid-settings";
+
+
 @import "atoms/style";
 @import "molecules/style";
 @import "organisms/style";
