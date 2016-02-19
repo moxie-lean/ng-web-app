@@ -89,6 +89,9 @@
     "node": true,
     "amd": true
   },
+  "globals": {
+    "angular": 1
+  },
   "extends": "eslint:recommended",
   "ecmaFeatures": {
     "jsx": true,
