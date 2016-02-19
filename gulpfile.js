@@ -177,15 +177,12 @@ gulp.task('js:cs', function() {
 });
 
 // Tasks for continuous integration using the JS CS rules
-gulp.task('js:cs-ci', function() {
+gulp.task('js:ci', function() {
   return gulp.src( jsFiles )
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
-
-// Group of JS tasks for continuous integration
-gulp.task('js:ci', ['js:cs-ci']);
 
 /******************************************************************************
  | >   TEMPLATE TASKS
