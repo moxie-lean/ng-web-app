@@ -5,8 +5,8 @@ angular.module('leean', [
   'ngRoute',
   'leean.views.home',
   'leean.views.about'
-]).
-config(['$routeProvider', function($routeProvider) {
+])
+.config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
 
