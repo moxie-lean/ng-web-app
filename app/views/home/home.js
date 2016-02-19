@@ -5,10 +5,10 @@ angular.module('leean.views.home', ['ngRoute'])
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {
     templateUrl: 'templates/home/home.html',
-    controller: 'HomeCtrl'
+    controller: 'HomeController'
   });
 }])
 
-.controller('HomeCtrl', [function() {
+.controller('HomeController', [function() {
 
 }]);
