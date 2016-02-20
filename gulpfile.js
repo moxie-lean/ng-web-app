@@ -1,7 +1,6 @@
 'use strict';
 
 var gulp = require('gulp');
-var babelify = require('babelify');
 var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('gulp-cssnano');
 var browserify = require('browserify');
@@ -9,8 +8,6 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var notify = require('gulp-notify');
 var sourcemaps = require('gulp-sourcemaps');
-//var source = require('vinyl-source-stream');
-//var buffer = require('vinyl-buffer');
 var sass = require('gulp-sass');
 var gutil = require('gulp-util');
 var eslint = require('gulp-eslint');
