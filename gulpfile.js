@@ -20,7 +20,7 @@ var fs = require('fs');
 var sassLint = require('gulp-sass-lint');
 
 var projectPath = 'app/';
-var outputPath = 'www/build/';
+var outputPath = 'public/build/';
 var configPath = 'config/';
 
 var envFile = configPath + 'env.prod.json';
@@ -29,7 +29,7 @@ if( fs.existsSync(configPath + 'env.local.json') ) {
 }
 console.log('Using env file: ' + envFile);
 
-gulp.task('assets', ['styles', 'js']);
+gulp.task('assets', ['styles']);
 
 /**
  * Run the minify:styles task as dependency, which will compile from sass,
