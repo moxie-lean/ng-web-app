@@ -8,3 +8,7 @@ tmp
 public/build/
 npm-debug.log
 config/*.local.*
+public/css/*
+!public/css/*.md
+public/js/*
+!public/js/*.md
