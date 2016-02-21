@@ -8,3 +8,5 @@ tmp
 public/build/
 npm-debug.log
 config/*.local.*
+public/*
+!public/index.html
