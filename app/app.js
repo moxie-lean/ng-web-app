@@ -1,15 +1,12 @@
-'use strict';
+import angular from 'angular';
+import { name as home } from './views/home/';
+import { name as about } from './views/about';
 
-// Declare app level module which depends on views, and components
 angular.module('leean', [
   'ngRoute',
-  'leean.views.home',
-  'leean.views.about'
+  home,
+  about
 ])
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
-
-//require('./view1');
-//require('./view2');
-//require('./components/version');
