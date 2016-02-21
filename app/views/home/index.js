@@ -1,10 +1,12 @@
-module.exports = angular.module('leean.views.home', [
-  'ngRoute'
+import angular from 'angular';
+import { name as templates } from './../../templates';
+
+module.exports = angular.module('views.home', [
+  'ngRoute',
+  templates
 ])
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {
-    templateUrl: 'templates/home/home.html',
-    controller: 'HomeController'
+    templateUrl: 'home.html',
   });
-}])
-.controller('HomeController');
+}]);
