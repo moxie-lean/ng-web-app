@@ -6,7 +6,7 @@
   "repository": "https://github.com/moxie-leean/leean-angular",
   "license": "MIT",
   "devDependencies": {
-    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-es2015": "^6.5.0",
     "babelify": "^7.2.0",
     "bower": "^1.3.1",
     "browserify": "^13.0.0",
@@ -29,11 +29,30 @@
     "json-server": "^0.8.8",
     "shelljs": "^0.2.6"
   },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ],
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jQuery": "global:jQuery",
+    "jQuery": "global:jQuery",
+    "angular": "global:angular"
+  },
   "scripts": {
     "postinstall": "bower install",
     "prestart": "npm install",
     "start": "http-server -a localhost -p 8000 -c-1",
     "pretest": "npm install",
-    "json-server": "json-server --watch config/json/db.json"
+    "json-server": "json-server --watch config/json/db.json",
+    "browserify": "browserify ./app/app.js -o public/build/js/production.js"
   }
 }
