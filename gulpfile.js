@@ -9,10 +9,8 @@ var notify = require('gulp-notify');
 var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var gutil = require('gulp-util');
-var templateCache = require('gulp-angular-templatecache');
 var env = require('gulp-env');
 var fs = require('fs');
-var sassLint = require('gulp-sass-lint');
 
 var projectPath = 'app/';
 var outputPath = 'public/build/';
@@ -78,18 +76,10 @@ gulp.task('styles:combine', function(){
  *  Check the SASS style.
  */
 gulp.task('styles:ci', function () {
-  var sassFiles = [
-  ];
   gulp.src(projectPath + '**/*.s+(a|c)ss')
   .pipe(sassLint())
   .pipe(sassLint.format())
   .pipe(sassLint.failOnError())
-});
-
-gulp.task('tc', function () {
-  return gulp.src(projectPath + '**/*.html')
-  .pipe(templateCache())
-  .pipe(gulp.dest(outputPath + 'js'));
 });
 
 // Alias to the watch:all task
@@ -99,11 +89,5 @@ gulp.task('watch:all', ['watch:sass', 'watch:templates']);
 gulp.task('watch:sass', ['styles'], function(){
   gulp.watch(projectPath + '**/*.scss', ['styles']);
 });
-
-gulp.task('watch:templates', ['tc'], function(){
-  gulp.watch(projectPath + '**/*.html', ['tc']);
-});
-
-gulp.task('ci', ['styles:ci']);
 
 gulp.task('default', ['watch:sass']);
