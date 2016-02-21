@@ -17,7 +17,6 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cssnano": "^2.1.0",
     "gulp-env": "^0.4.0",
-    "gulp-eslint": "^1.1.1",
     "gulp-notify": "^2.0.0",
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^2.1.1",
@@ -31,19 +30,11 @@
   },
   "browserify": {
     "transform": [
-      [
-        "babelify",
-        {
-          "presets": [
-            "es2015"
-          ]
-        }
-      ],
+      "babelify",
       "browserify-shim"
     ]
   },
   "browserify-shim": {
-    "jQuery": "global:jQuery",
     "jQuery": "global:jQuery",
     "angular": "global:angular"
   },
@@ -51,8 +42,9 @@
     "postinstall": "bower install",
     "prestart": "npm install",
     "start": "http-server -a localhost -p 8000 -c-1",
-    "pretest": "npm install",
     "json-server": "json-server --watch config/json/db.json",
-    "browserify": "browserify ./app/app.js -o public/build/js/production.js"
+    "browserify": "browserify ./app/app.js -o public/build/js/production.js",
+    "js:ci": "eslint app/**/*.js",
+    "test": "npm run js:ci"
   }
 }
