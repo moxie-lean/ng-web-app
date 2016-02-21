@@ -1,13 +1,12 @@
-'use strict';
+import angular from 'angular';
 
-angular.module('leean.views.about', ['ngRoute'])
-
+module.exports = angular.module('views.about', [
+  'ngRoute'
+])
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/about', {
     templateUrl: 'templates/about/about.html',
     controller: 'AboutController'
   });
 }])
-
-.controller('AboutController', [function() {
-}]);
+.controller('AboutController');
