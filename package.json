@@ -13,17 +13,11 @@
     "browserify-shim": "^3.8.12",
     "eslint-plugin-angular": "^0.15.0",
     "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-cssnano": "^2.1.0",
     "gulp-env": "^0.4.0",
-    "gulp-notify": "^2.0.0",
     "gulp-rename": "^1.2.0",
-    "gulp-sass": "^2.1.1",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp-uglify": "^1.0.0",
-    "gulp-util": "^3.0.7",
     "http-server": "^0.6.1",
     "json-server": "^0.8.8",
+    "node-sass": "^3.4.2",
     "shelljs": "^0.2.6",
     "stringify": "^4.0.1",
     "watchify": "^3.7.0"
@@ -43,10 +37,16 @@
     "postinstall": "bower install && npm run browserify",
     "prestart": "npm install",
     "start": "http-server -a localhost -p 8000 -c-1",
+
     "json-server": "json-server --watch config/json/db.json",
-    "browserify": "browserify ./app/app.js -o public/build/js/production.js",
-    "watch:js": "watchify ./app/app.js -o public/build/js/production.js",
+
+    "browserify": "browserify ./app/app.js -d > ./public/js/bundle.js",
+    "js": "npm run browserify",
+    "watch:js": "watchify ./app/app.js -d -o public/js/bundle.js -v",
     "ci:js": "eslint app/**/*.js",
+
+    "styles": "node-sass app/style.scss -o=public/css/",
+
     "test": "npm run js:ci"
   }
 }
