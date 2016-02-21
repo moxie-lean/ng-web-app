@@ -18,6 +18,7 @@
     "http-server": "^0.6.1",
     "json-server": "^0.8.8",
     "node-sass": "^3.4.2",
+    "npm-run-all": "^1.5.1",
     "shelljs": "^0.2.6",
     "stringify": "^4.0.1",
     "watchify": "^3.7.0"
@@ -34,19 +35,17 @@
     "angular": "global:angular"
   },
   "scripts": {
-    "postinstall": "bower install && npm run browserify",
-    "prestart": "npm install",
+    "postinstall": "bower install && mkdir -p public/js public/css public/img && npm run develop",
     "start": "http-server -a localhost -p 8000 -c-1",
-
     "json-server": "json-server --watch config/json/db.json",
-
+    "watch": "npm-run-all -p watch:js watch:sass",
     "browserify": "browserify ./app/app.js -d > ./public/js/bundle.js",
     "js": "npm run browserify",
     "watch:js": "watchify ./app/app.js -d -o public/js/bundle.js -v",
     "ci:js": "eslint app/**/*.js",
-
     "styles": "node-sass app/style.scss -o=public/css/",
-
+    "watch:sass": "node-sass app/style.scss -o=public/css/ -w -r",
+    "develop": "npm run styles && npm run js",
     "test": "npm run js:ci"
   }
 }
