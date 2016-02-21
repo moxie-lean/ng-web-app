@@ -1,19 +1,14 @@
 'use strict';
 
 var gulp = require('gulp');
-var babelify = require('babelify');
 var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('gulp-cssnano');
-var browserify = require('browserify');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var notify = require('gulp-notify');
 var sourcemaps = require('gulp-sourcemaps');
-//var source = require('vinyl-source-stream');
-//var buffer = require('vinyl-buffer');
 var sass = require('gulp-sass');
 var gutil = require('gulp-util');
-var eslint = require('gulp-eslint');
 var templateCache = require('gulp-angular-templatecache');
 var env = require('gulp-env');
 var fs = require('fs');
@@ -91,31 +86,6 @@ gulp.task('styles:ci', function () {
   .pipe(sassLint.failOnError())
 });
 
-// Files to inspect in order to follow the same standard
-var jsFiles = [
-  projectPath + '**/*.js'
-];
-
-// Tasks that are handle the lints without breaking the gulp report
-gulp.task('js:lint', ['js:cs']);
-
-// Gulp taks to analyze the code using JS CS rules witouth breaking gulp
-gulp.task('js:cs', function() {
-  return gulp.src( jsFiles )
-  .pipe(eslint())
-  .pipe(eslint.format())
-  .pipe( notify({ message: 'JS Completed', onLast: true }) );
-});
-
-// Tasks for continuous integration using the JS CS rules
-gulp.task('js:ci', function() {
-  return gulp.src( jsFiles )
-  .pipe(eslint())
-  .pipe(eslint.format())
-  .pipe(eslint.failAfterError());
-});
-
-
 gulp.task('tc', function () {
   return gulp.src(projectPath + '**/*.html')
   .pipe(templateCache())
@@ -124,11 +94,7 @@ gulp.task('tc', function () {
 
 // Alias to the watch:all task
 gulp.task('watch', ['watch:all']);
-gulp.task('watch:all', ['watch:js', 'watch:sass', 'watch:templates']);
-
-gulp.task('watch:js', ['js'], function(){
-  gulp.watch(sourcePath + 'js/app/**/*.js', ['js']);
-});
+gulp.task('watch:all', ['watch:sass', 'watch:templates']);
 
 gulp.task('watch:sass', ['styles'], function(){
   gulp.watch(projectPath + '**/*.scss', ['styles']);
@@ -138,6 +104,6 @@ gulp.task('watch:templates', ['tc'], function(){
   gulp.watch(projectPath + '**/*.html', ['tc']);
 });
 
-gulp.task('ci', ['js:ci', 'styles:ci']);
+gulp.task('ci', ['styles:ci']);
 
-gulp.task('default', ['watch:js', 'watch:sass']);
+gulp.task('default', ['watch:sass']);
