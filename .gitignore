@@ -10,3 +10,4 @@ npm-debug.log
 config/*.local.*
 public/*
 !public/index.html
+.idea
