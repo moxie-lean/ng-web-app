@@ -52,7 +52,7 @@
     "styles": "npm run scss && npm run autoprefix",
     "autoprefix": "postcss -u autoprefixer -r public/css/style.css",
     "watch:js": "watchify ./app/app.js -d -o public/js/bundle.js -v",
-    "watch:sass": "onchange app/**/*.scss -- npm run styles",
+    "watch:sass": "onchange app/\\*\\*/\\*.scss -- npm run styles",
     "build:js": "uglifyjs public/js/bundle.js -m -c -o public/js/bundle.js",
     "build:scss": "node-sass app/style.scss --output-style compressed -o public/css/",
     "build:css": "npm run build:scss && npm run autoprefix",
