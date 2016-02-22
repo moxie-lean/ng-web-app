@@ -7,7 +7,7 @@ Point your DocumentRoot at the /public folder to run the app. Or you can use ```
 
 ## Content
 
-- [Requirements](https://github.com/moxie-leean/web-app/tree/develop#requirements)
+- [Requirements](#requirements)
 - [Getting Started](https://github.com/moxie-leean/web-app/tree/develop#getting-started)
   - [Clone the repo](https://github.com/moxie-leean/web-app/tree/develop#clone-the-repo)
   - [Install dependencies](https://github.com/moxie-leean/web-app/tree/develop#install-dependencies)
@@ -25,6 +25,14 @@ Point your DocumentRoot at the /public folder to run the app. Or you can use ```
   - [scss](https://github.com/moxie-leean/web-app/tree/develop#scss)
   - [scss:ci](https://github.com/moxie-leean/web-app/tree/develop#scssci)
   - [watch](https://github.com/moxie-leean/web-app/tree/develop#watch)
+  - [watch:js](https://github.com/moxie-leean/web-app/tree/develop#watch)
+  - [watch:scss](https://github.com/moxie-leean/web-app/tree/develop#watch)
+  - [develop](https://github.com/moxie-leean/web-app/tree/develop#develop)
+  - [build](https://github.com/moxie-leean/web-app/tree/develop#build)
+  - [build:js](https://github.com/moxie-leean/web-app/tree/develop#buildjs)
+  - [build:scss](https://github.com/moxie-leean/web-app/tree/develop#buildscss)
+  - [build:css](https://github.com/moxie-leean/web-app/tree/develop#buildcss)
+  - [test](https://github.com/moxie-leean/web-app/tree/develop#test)
 
 ## Requirements
 
