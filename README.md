@@ -14,8 +14,17 @@ Point your DocumentRoot at the /public folder to run the app. Or you can use ```
   - [Create fake API](https://github.com/moxie-leean/web-app/tree/develop#create-fake-api-data)
   - [Set-up ENV Variables](https://github.com/moxie-leean/web-app/tree/develop#set-up-env-variables)
 - [Automatic commands](https://github.com/moxie-leean/web-app/tree/develop#automatic-commands)
+  - [postinstall](https://github.com/moxie-leean/web-app/tree/develop#postinstall)
 - [Commands](https://github.com/moxie-leean/web-app/tree/develop#commands)
-
+  - [start](https://github.com/moxie-leean/web-app/tree/develop#start)
+  - [json-server](https://github.com/moxie-leean/web-app/tree/develop#json-server)
+  - [watch](https://github.com/moxie-leean/web-app/tree/develop#watch)
+  - [browserify](https://github.com/moxie-leean/web-app/tree/develop#browserify)
+  - [js](https://github.com/moxie-leean/web-app/tree/develop#js)
+  - [js:ci](https://github.com/moxie-leean/web-app/tree/develop#jsci)
+  - [scss](https://github.com/moxie-leean/web-app/tree/develop#scss)
+  - [scss:ci](https://github.com/moxie-leean/web-app/tree/develop#scssci)
+  - [styles](https://github.com/moxie-leean/web-app/tree/develop#styles)
 
 ## Requirements
 
