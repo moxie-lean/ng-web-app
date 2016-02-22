@@ -18,13 +18,13 @@ Point your DocumentRoot at the /public folder to run the app. Or you can use ```
 - [Commands](https://github.com/moxie-leean/web-app/tree/develop#commands)
   - [start](https://github.com/moxie-leean/web-app/tree/develop#start)
   - [json-server](https://github.com/moxie-leean/web-app/tree/develop#json-server)
-  - [watch](https://github.com/moxie-leean/web-app/tree/develop#watch)
-  - [browserify](https://github.com/moxie-leean/web-app/tree/develop#browserify)
   - [js](https://github.com/moxie-leean/web-app/tree/develop#js)
   - [js:ci](https://github.com/moxie-leean/web-app/tree/develop#jsci)
+  - [browserify](https://github.com/moxie-leean/web-app/tree/develop#browserify)
+  - [styles](https://github.com/moxie-leean/web-app/tree/develop#styles)
   - [scss](https://github.com/moxie-leean/web-app/tree/develop#scss)
   - [scss:ci](https://github.com/moxie-leean/web-app/tree/develop#scssci)
-  - [styles](https://github.com/moxie-leean/web-app/tree/develop#styles)
+  - [watch](https://github.com/moxie-leean/web-app/tree/develop#watch)
 
 ## Requirements
 
@@ -104,28 +104,6 @@ This is very similar to the previous but instead it opens a server at
 port `3000` where you can access to fake APIs and you can create your
 own APIS and use that in your development process to test. 
 
-## watch
-
-```
-npm run watch
-```
-
-This command will watch any change on the `.js` and `.scss` files and
-will trigger the compilation of JS or SASS if it's the case with this
-you can avoid the need to run every time the taks to build the js or
-sass to css.
-
-# browserify
-
-```
-npm run browserify
-```
-
-This command creates a single `.js` file from all the imports that are
-made on `app/app.js` and makes transformations as well from ES6, this
-script creates a source map as well so you can debug more easily where
-errors are generated or triggered from the code.
-
 # js
 
 ```
@@ -138,11 +116,43 @@ type.
 # js:ci
 
 ```
-npm run js:ci
+npm run js:ci -s
 ```
 
 Run the eslint script rules again every `.js` file inside of the app
 directory in order to follow the same rules to write consisten JS.
+
+# browserify
+
+```
+npm run browserify
+```
+
+This command creates a single `.js` file from all the imports that are
+made on `app/app.js` and makes transformations as well from ES6, this
+script creates a source map as well so you can debug more easily where
+errors are generated or triggered from the code.
+
+
+# styles
+
+```
+npm run styles
+```
+
+This script runs the script above `scss` in order to generate the css
+file after that applies the autoprefixer script in order to avoid
+the need of write prefixer on some properties.
+
+# autoprefix
+
+```
+npm run autoprefix
+```
+
+This command loops on the created `.css` file and adds the autoprefixer
+for different browsers on different properties to avoid the need to
+write that manually.
 
 # scss
 
@@ -160,18 +170,94 @@ going to have the autoprefixer feature if you do so, use `npm run styles` instea
 # scss:ci
 
 ```
-npm run scss:ci
+npm run scss:ci -s
 ```
 
 This task applies the a sass lint on every `.scss` file inside of the app
 directory, in order to write consisten sass files.
 
-# styles
+## watch
 
 ```
-npm run styles
+npm run watch
 ```
 
-This script runs the script above `scss` in order to generate the css
-file after that applies the autoprefixer script in order to avoid
-the need of write prefixer on some properties.
+This command will watch any change on the `.js` and `.scss` files and
+will trigger the compilation of JS or SASS if it's the case with this
+you can avoid the need to run every time the taks to build the js or
+sass to css.
+
+## watch:js
+
+```
+npm run watch:js
+```
+
+This command will watch any change on the `.js` files and will generate
+the bundle file on development mode so we can follow any problem using
+the sourcemaps and avoid large wait times between compliation of assets.
+
+## watch:scss
+
+```
+npm run watch:scss
+```
+
+This command will watch any change on the `.scss` files and will generate
+the `.css` file on development mode so we can follow any problem using
+the sourcemaps generated it will run the the autoprefix as well.
+
+## develop
+
+```
+npm run develop
+```
+
+This tasks run the tasks: `styles` and `js`, which compiles all sass
+into a single CSS and all JS in a single JS as well, the files are
+develop friendly since includes the sourcemaps for easy develop process.
+
+## build
+
+```
+npm run build
+```
+
+This tasks removes the source maps, and creates minified versions of the
+CSS and JS files in order to be production ready.
+
+## build:js
+
+```
+npm run build:js
+```
+
+This task removes the source maps, and creates minified versions of the
+js file.
+
+## build:scss
+
+```
+npm run build:scss
+```
+
+This task removes the source maps, and creates minified versions of the
+CSS file.
+
+## build:css
+
+```
+npm run build:css
+```
+
+This task creates a single CSS version with autoprefix, minified version
+and with no source map to be production ready.
+
+## test
+
+```
+npm test
+```
+
+Task that runs the JS and CSS lint used for travis in order to have a CI
+sytem before tests. 
