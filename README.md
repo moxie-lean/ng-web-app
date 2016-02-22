@@ -7,14 +7,14 @@ Point your DocumentRoot at the /public folder to run the app. Or you can use ```
 
 ## Content
 
-- Requirements
-- Getting Started
-  - Clone the repo
-  - Install dependencies
-  - Create fake API
-  - Set-up ENV Variables
-- Automatic commands
-- Commands
+- [Requirements](https://github.com/moxie-leean/web-app/tree/develop#requirements)
+- [Getting Started](https://github.com/moxie-leean/web-app/tree/develop#getting-started)
+  - [Clone the repo](https://github.com/moxie-leean/web-app/tree/develop#clone-the-repo)
+  - [Install dependencies](https://github.com/moxie-leean/web-app/tree/develop#install-dependencies)
+  - [Create fake API](https://github.com/moxie-leean/web-app/tree/develop#create-fake-api-data)
+  - [Set-up ENV Variables](https://github.com/moxie-leean/web-app/tree/develop#set-up-env-variables)
+- [Automatic commands](https://github.com/moxie-leean/web-app/tree/develop#automatic-commands)
+- [Commands](https://github.com/moxie-leean/web-app/tree/develop#commands)
 
 
 ## Requirements
@@ -116,3 +116,53 @@ This command creates a single `.js` file from all the imports that are
 made on `app/app.js` and makes transformations as well from ES6, this
 script creates a source map as well so you can debug more easily where
 errors are generated or triggered from the code.
+
+# js
+
+```
+npm run js
+```
+
+Alias for the command `npm run browserify`, makes easier to remember and
+type.
+
+# js:ci
+
+```
+npm run js:ci
+```
+
+Run the eslint script rules again every `.js` file inside of the app
+directory in order to follow the same rules to write consisten JS.
+
+# scss
+
+```
+npm run scss
+```
+
+This script compiles the sass files into a single css file with no
+minification, and adds a source map as well to the file to easy track
+the properties of each element.  
+
+**Note:** Please don't use this script directly since you are not
+going to have the autoprefixer feature if you do so, use `npm run styles` instead.
+
+# scss:ci
+
+```
+npm run scss:ci
+```
+
+This task applies the a sass lint on every `.scss` file inside of the app
+directory, in order to write consisten sass files.
+
+# styles
+
+```
+npm run styles
+```
+
+This script runs the script above `scss` in order to generate the css
+file after that applies the autoprefixer script in order to avoid
+the need of write prefixer on some properties.
