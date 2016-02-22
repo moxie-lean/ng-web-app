@@ -14,13 +14,3 @@ if( fs.existsSync(configPath + 'env.local.json') ) {
 }
 console.log('Using env file: ' + envFile);
 
-/**
- *  Check the SASS style.
- */
-gulp.task('styles:ci', function () {
-  gulp.src(projectPath + '**/*.s+(a|c)ss')
-  .pipe(sassLint())
-  .pipe(sassLint.format())
-  .pipe(sassLint.failOnError())
-});
-
