@@ -86,7 +86,7 @@ This script is triggered after the command `npm install` and is executed after `
 
 Inside of the projet there are several commands you can use as a build tools and helper commands to compile assets, watch changes and so on, every command are available to use after you have.
 
-## start  
+### start  
 
 ```
 npm start
@@ -94,7 +94,7 @@ npm start
 
 This command will allow you to wake up the `http` server, and you will be able to access to the site at `localhost:8000`, the command will be waiting for any response to the server you can run this command on the background or in another tab for preference, you can kill the server at any time just by typing `ctrl + c`.
 
-## json-server  
+### json-server  
 
 ```
 npm run json-server
@@ -104,7 +104,7 @@ This is very similar to the previous but instead it opens a server at
 port `3000` where you can access to fake APIs and you can create your
 own APIS and use that in your development process to test. 
 
-# js
+### js
 
 ```
 npm run js
@@ -113,7 +113,7 @@ npm run js
 Alias for the command `npm run browserify`, makes easier to remember and
 type.
 
-# js:ci
+### js:ci
 
 ```
 npm run js:ci -s
@@ -122,7 +122,7 @@ npm run js:ci -s
 Run the eslint script rules again every `.js` file inside of the app
 directory in order to follow the same rules to write consisten JS.
 
-# browserify
+### browserify
 
 ```
 npm run browserify
@@ -134,7 +134,7 @@ script creates a source map as well so you can debug more easily where
 errors are generated or triggered from the code.
 
 
-# styles
+### styles
 
 ```
 npm run styles
@@ -144,7 +144,7 @@ This script runs the script above `scss` in order to generate the css
 file after that applies the autoprefixer script in order to avoid
 the need of write prefixer on some properties.
 
-# autoprefix
+### autoprefix
 
 ```
 npm run autoprefix
@@ -154,7 +154,7 @@ This command loops on the created `.css` file and adds the autoprefixer
 for different browsers on different properties to avoid the need to
 write that manually.
 
-# scss
+### scss
 
 ```
 npm run scss
@@ -167,7 +167,7 @@ the properties of each element.
 **Note:** Please don't use this script directly since you are not
 going to have the autoprefixer feature if you do so, use `npm run styles` instead.
 
-# scss:ci
+### scss:ci
 
 ```
 npm run scss:ci -s
@@ -176,7 +176,7 @@ npm run scss:ci -s
 This task applies the a sass lint on every `.scss` file inside of the app
 directory, in order to write consisten sass files.
 
-## watch
+### watch
 
 ```
 npm run watch
@@ -187,7 +187,7 @@ will trigger the compilation of JS or SASS if it's the case with this
 you can avoid the need to run every time the taks to build the js or
 sass to css.
 
-## watch:js
+### watch:js
 
 ```
 npm run watch:js
@@ -197,7 +197,7 @@ This command will watch any change on the `.js` files and will generate
 the bundle file on development mode so we can follow any problem using
 the sourcemaps and avoid large wait times between compliation of assets.
 
-## watch:scss
+### watch:scss
 
 ```
 npm run watch:scss
@@ -207,7 +207,7 @@ This command will watch any change on the `.scss` files and will generate
 the `.css` file on development mode so we can follow any problem using
 the sourcemaps generated it will run the the autoprefix as well.
 
-## develop
+### develop
 
 ```
 npm run develop
@@ -217,7 +217,7 @@ This tasks run the tasks: `styles` and `js`, which compiles all sass
 into a single CSS and all JS in a single JS as well, the files are
 develop friendly since includes the sourcemaps for easy develop process.
 
-## build
+### build
 
 ```
 npm run build
@@ -226,7 +226,7 @@ npm run build
 This tasks removes the source maps, and creates minified versions of the
 CSS and JS files in order to be production ready.
 
-## build:js
+### build:js
 
 ```
 npm run build:js
@@ -235,7 +235,7 @@ npm run build:js
 This task removes the source maps, and creates minified versions of the
 js file.
 
-## build:scss
+### build:scss
 
 ```
 npm run build:scss
@@ -244,7 +244,7 @@ npm run build:scss
 This task removes the source maps, and creates minified versions of the
 CSS file.
 
-## build:css
+### build:css
 
 ```
 npm run build:css
@@ -253,7 +253,7 @@ npm run build:css
 This task creates a single CSS version with autoprefix, minified version
 and with no source map to be production ready.
 
-## test
+### test
 
 ```
 npm test
