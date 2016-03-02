@@ -5,6 +5,9 @@ bower_components/
 tmp
 .DS_Store
 .idea
-www/build/
+public/build/
 npm-debug.log
 config/*.local.*
+public/*
+!public/index.html
+.idea

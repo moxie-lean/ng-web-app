@@ -14,5 +14,6 @@
     "normalize-scss": "^3.0.3",
     "bourbon": "^4.2.6",
     "neat": "^1.7.2"
+    "normalize-scss": "^3.0.3"
   }
 }
