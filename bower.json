@@ -10,10 +10,9 @@
     "angular-route": "~1.4.0",
     "angular-loader": "~1.4.0",
     "angular-mocks": "~1.4.0",
-    "html5-boilerplate": "~5.2.0",
     "normalize-scss": "^3.0.3",
     "bourbon": "^4.2.6",
-    "neat": "^1.7.2"
+    "neat": "^1.7.2",
     "normalize-scss": "^3.0.3"
   }
 }
