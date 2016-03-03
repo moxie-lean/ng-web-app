@@ -5,9 +5,12 @@ module.exports = angular.module('views.about', [
   'ngRoute',
   templates
 ])
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/about', {
-    templateUrl: 'about.html'
-  });
-}])
-.controller('AboutCtrl');
+.config(config);
+
+function config($routeProvider) {
+  $routeProvider
+    .when('/about', {
+      templateUrl: 'about.html'
+    });
+}
+
