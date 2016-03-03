@@ -1,0 +1,23 @@
+@import "../bower_components/neat/app/assets/stylesheets/neat-helpers";
+
+// Adding a Visual Grid while you develop. Set to 'true.'
+$visual-grid: false;
+$visual-grid-color: #CCCCCC;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.2;
+
+// Change the grid settings
+$column: 60px;
+$gutter: 20px;
+$grid-columns: 12;
+$max-width: 940px;
+
+
+// Breakpoints Units
+
+$small-screen: 640px;
+$medium-screen: 768px;
+
+// Breakpoints
+$mobile: new-breakpoint(max-width $small-screen 12);
+$tablet: new-breakpoint(max-width $medium-screen 12);
