@@ -58,6 +58,6 @@
     "build:css": "npm run build:scss && npm run autoprefix",
     "build": "npm run build:js && npm run build:css",
     "develop": "npm run styles && npm run js",
-    "test": "npm run js:ci -s && npm run sass:ci -s"
+    "test": "npm run js:ci -s && npm run scss:ci -s"
   }
 }
