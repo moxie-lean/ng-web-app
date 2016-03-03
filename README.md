@@ -100,7 +100,10 @@ Inside of the projet there are several commands you can use as a build tools and
 npm start
 ```
 
-This command will allow you to wake up the `http` server, and you will be able to access to the site at `localhost:8000`, the command will be waiting for any response to the server you can run this command on the background or in another tab for preference, you can kill the server at any time just by typing `ctrl + c`.
+This command will allow you to wake up the `http` server, and you will be able to access to the site at 
+the address that will be displayed on the console, you will be able to
+test internally with your other devices as well to acess to the site
+using an external IP.
 
 ### json-server  
 

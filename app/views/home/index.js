@@ -5,8 +5,11 @@ module.exports = angular.module('views.home', [
   'ngRoute',
   templates
 ])
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/', {
-    templateUrl: 'home.html'
-  });
-}]);
+.config(config);
+
+function config($routeProvider){
+  $routeProvider
+    .when('/', {
+      templateUrl: 'home.html'
+    });
+}
