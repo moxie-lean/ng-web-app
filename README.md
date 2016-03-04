@@ -1,5 +1,4 @@
-# Moxie's Leean Web App [![Build
-Status](https://travis-ci.org/moxie-leean/web-app.svg?branch=master)](https://travis-ci.org/moxie-leean/web-app)
+# Moxie's Leean Web App [![Build Status](https://travis-ci.org/moxie-leean/web-app.svg?branch=master)](https://travis-ci.org/moxie-leean/web-app)
 
 Starter Web App based on the modular/atomic Leean concept.
 
