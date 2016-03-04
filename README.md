@@ -1,4 +1,5 @@
-# Moxie's Leean Web App
+# Moxie's Leean Web App [![Build Status](https://travis-ci.org/moxie-leean/web-app.svg?branch=master)](https://travis-ci.org/moxie-leean/web-app)
+
 Starter Web App based on the modular/atomic Leean concept.
 
 Based on the [Angular Seed](https://github.com/angular/angular-seed) project. Follow the link to check the documentation.
