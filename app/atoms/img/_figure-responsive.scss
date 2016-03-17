@@ -1,13 +1,13 @@
 %figure_responsive {
   figure {
-    position: relative;
-    width: 100%;
-
     @include media($tablet) {
       display: inline;
       overflow: hidden;
       height: auto;
     }
+
+    position: relative;
+    width: 100%;
 
     img {
       max-width: 100%;

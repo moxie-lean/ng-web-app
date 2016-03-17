@@ -1,1 +1,1 @@
-/* Add requires here for all directives directly referenced by the home template */
+/* Add requires here for all directives referenced by the home template */
