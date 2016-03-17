@@ -1,19 +1,54 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+  "static": {
+    "site_title": "XXXXX",
+    "logo": "img/general/logo-header.svg",
+    "main_menu": {
+      "slug": "main_menu",
+      "items": [
+        {
+          "title": "",
+          "link": "#/"
+        },
+        {
+          "title": "",
+          "link": "#/",
+          "sub_menu": [
+            {
+              "title": "",
+              "link": "#/"
+            },
+            {
+              "title": "",
+              "link": "#/"
+            }
+          ]
+        }
+      ]
+    },
+    "widgets": {
+
+    },
+    "footer": {
+
     }
-  ],
-  "comments": [
+  },
+  "post": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "post_id": 5,
+      "slug": "/",
+      "type": "page-home",
+      "content": {
+        "title": "Home",
+        "content": ""
+      },
+      "meta": {}
+    },
+    {
+      "post_id": 10,
+      "slug": "/contact-us",
+      "template": "contact",
+      "content": {},
+      "meta": {}
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
