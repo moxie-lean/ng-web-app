@@ -1,0 +1,21 @@
+input {
+  @include placeholder {
+    opacity:0.5;
+  }
+
+  border: 2px solid transparent;
+  width:100%;
+
+  &.ng-dirty:not(.ng-empty) {
+    &.ng-invalid {
+      border-color: red;
+    }
+    &.ng-valid {
+      border-color: transparent;
+    }
+  }
+}
+
+textarea:focus, input:focus, button:focus {
+  outline: none;
+}

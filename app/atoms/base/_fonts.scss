@@ -1,0 +1,80 @@
+// IS THIS GENERIC??
+
+
+/*
+ * Custom group of mixins to allow use rem or pixel in the
+ * fontSize mixin.
+ * UPDATE: modified to use bourbon rem() and px() functions (won't work standalone)
+ */
+
+@function typeOfUnit( $size ){
+  $unit: str-slice(#{$size}, -3);
+  $unit: to-lower-case($unit);
+
+  @if  $unit != "rem" {
+    $unit: str-slice(#{$size}, -2);
+    $unit: to-lower-case($unit);
+  }
+  @return $unit;
+}
+
+@mixin fontSizeFromPixel( $pixelSize ){
+  font-size: $pixelSize;
+  font-size: rem( $pixelSize );
+}
+
+@mixin fontSizeFromRem( $remSize ){
+  font-size: px( $remSize );
+  font-size: $remSize;
+}
+
+@mixin fontSize($size) {
+
+  $unit: typeOfUnit( $size );
+
+  @if $unit == "px" {
+    @include fontSizeFromPixel($size);
+  } @else if( $unit == "rem" ) {
+    @include fontSizeFromRem($size);
+  }
+}
+
+/* font defintions */
+
+$font_montserrat: "Montserrat", sans-serif;
+
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src:  url("../fonts/museo-sans/museo-sans-cyrl.eot");
+  src:  url("../fonts/museo-sans/museo-sans-cyrl.eot") format("embedded-opentype"), url("../fonts/museo-sans/museo-sans-cyrl.ttf") format("truetype"), url("../fonts/museo-sans/museo-sans-cyrl.woff") format("woff"), url("../fonts/museo-sans/museo-sans-cyrl.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  @include fontSize(15px);
+  font-family: $font_montserrat;
+  font-weight:400;
+  letter-spacing: 0.04em;
+  line-height: 1.5em;
+  color: $gray_chateau;
+}
+
+p {
+  margin-bottom: 2.4em;
+}
+
+blockquote {
+  @include fontSize(20px);
+  font-family: Georgia;
+  font-style: italic;
+  line-height: 1.4em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+%title_thin {
+  font-family: "Museo Sans Cyrl", sans-serif;
+  font-weight: 100;
+}

@@ -1,0 +1,25 @@
+%button_default {
+
+}
+
+a,
+button{
+  &.a__button{
+    @extend %button_default;
+    background: $button_bg;
+    color: $button_text;
+
+    &:not([disabled]):hover {
+      background: $button_hover_bg;
+      color: $button_hover_text;
+    }
+  }
+}
+
+button {
+  @extend %button_transition;
+
+  &:not([disabled]):hover {
+    color: $button_text;
+  }
+}

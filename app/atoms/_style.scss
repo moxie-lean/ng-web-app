@@ -1,3 +1,19 @@
-@import "grid/style";
+@import "base/reset";
+@import "base/media";
+@import "base/colors";
+@import "base/fonts";
+@import "base/grid-settings";
 @import "base/headings";
 @import "base/links";
+@import "base/forms";
+@import "base/icons";
+@import "base/lists";
+@import "base/icomoon";
+
+@import "buttons/default";
+
+@import "ui/lines";
+@import "ui/general";
+@import "ui/animations";
+
+@import "img/figure-responsive";

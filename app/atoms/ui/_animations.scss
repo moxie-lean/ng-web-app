@@ -1,0 +1,12 @@
+$transition_fast: 0.21s;
+$transition_normal: 0.4s;
+
+@keyframes fadeOut {
+  from { opacity: 1 }
+  to { opacity: 0 }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}

@@ -1,0 +1,56 @@
+/* margin values made variables */
+$margin_0: 0;
+$margin_0_auto: 0 auto;
+
+@mixin padding_section {
+  padding: 6em 0;
+}
+
+@mixin padding_section_reduced {
+  padding: 3em 0;
+}
+
+// put a hard limit on how narrow the screen can be: 320px
+body {
+  min-width: 320px;
+}
+
+// container class, for all sections that need to fill the screen with color beyond their limit
+.container {
+  @include outer-container;
+  max-width: 96%;
+
+  @include media($tablet) {
+    width: 90%;
+    max-width: $max-width;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+  }
+}  
+
+.container-extended {
+  @include outer-container;
+  @include position(relative, null null null null);
+  width: 96%;
+  max-width: $max-width-extended;
+}
+
+.container-special {
+  @include outer-container;
+  max-width: $max-width;
+}
+
+.container-nolimit {
+  @include outer-container;  
+  max-width: 100%;
+}
+
+// ------------------------------------------------------------
+// Omega Reset
+// ------------------------------------------------------------
+
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
