@@ -1,14 +1,16 @@
 import angular from 'angular';
-import { name as home } from './views/home/';
-import { name as about } from './views/about';
+
+require('../public/js/ngConstants.js');
+require('leean-cms');
+require('components/ln-filters/module');
 
 angular
-  .module('app', ['ngRoute', home, about])
-  .config(config);
+  .module('app', [
+    'ngSanitize',
+    'templateCache',
+    'lnCms',
+    'lnFilters'
+  ]);
 
-function config($routeProvider) {
-  $routeProvider
-    .otherwise({
-      redirectTo: '/'
-    });
-}
+// Dependent on app.
+require('./templates');
