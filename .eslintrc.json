@@ -39,7 +39,7 @@
     "no-param-reassign": [
       2,
       {
-        "props": true
+        "props": false
       }
     ],
     "complexity": [ 2, 2 ],
