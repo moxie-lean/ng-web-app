@@ -22,6 +22,7 @@
     "http-server": "^0.6.1",
     "json-server": "^0.8.8",
     "leean-cms": "^0.1.0",
+    "leean-filters": "^0.1.0",
     "node-sass": "^3.4.2",
     "npm-run-all": "^1.5.1",
     "onchange": "^2.0.0",
@@ -46,7 +47,8 @@
   },
   "browser": {
     "default-link": "./node_modules/leean-cms/src/link-default.js",
-    "leean-cms": "./node_modules/leean-cms/src/module.js"
+    "ln-cms": "./node_modules/leean-cms/src/module.js",
+    "ln-filters": "./node_modules/leean-filters/src/module.js"
   },
   "aliasify": {
     "aliases": {

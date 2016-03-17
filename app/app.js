@@ -1,8 +1,8 @@
 import angular from 'angular';
 
 require('../public/js/ngConstants.js');
-require('leean-cms');
-require('components/ln-filters/module');
+require('ln-cms');
+require('ln-filters');
 
 angular
   .module('app', [
