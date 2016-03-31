@@ -37,8 +37,7 @@ rules:
     - 2
     -
       properties:
-        - margin
-        - content
+        - color
   quote:
     - 2
     -

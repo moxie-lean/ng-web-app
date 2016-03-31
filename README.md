@@ -1,10 +1,116 @@
-# Moxie's Leean Web App [![Build Status](https://travis-ci.org/moxie-leean/web-app.svg?branch=master)](https://travis-ci.org/moxie-leean/web-app)
+# skaled.com
 
-Starter Web App based on the modular/atomic Leean concept.
+# Useful links
 
-Based on the [Angular Seed](https://github.com/angular/angular-seed) project. Follow the link to check the documentation.
+- [Staging](http://moxienyc:moxiestaging101@skaled.moxie-staging.com/)
+- [Style guide](https://projects.invisionapp.com/share/7G6AKII5R#/screens)
 
-Point your DocumentRoot at the /public folder to run the app. Or you can use ```npm start``` as described in the Angular Seed project.
+# Scope of Work
+
+## Templates 
+- [ ] Home / Landing
+- [ ] About
+  - [ ] Our Approach
+  - [ ] Team & Careers   
+  - [ ] Contact
+- [ ] Solutions
+  - [ ] Lead Generation
+  - [ ] Training & Consulting 
+- [ ] Resources
+- [ ] Blog
+
+### GLOBAL
+- [ ] Navigation - We will add a script field in the back end to add tags and other scripts in:   
+  - [ ] Header
+  - [ ] Footer
+- [ ] Skaled's Branding (colors, logos, etc.)
+
+### HOME PAGE
+Page template to include support for following content:
+- [ ] Title
+- [ ] Images
+- [ ] Text
+- [ ] Testimonials
+
+### ABOUT - APPROACH
+Page template to include support for following content:
+- [ ] Title
+- [ ] Images
+- [ ] Text
+- [ ] Contact Form including but not limited to:   
+  - [ ] Name
+  - [ ] Email 
+
+### ABOUT - TEAM
+Page template to include support for following content:
+- [ ] Title
+- [ ] Images
+- [ ] Text
+- [ ] Table
+- [ ] Contact Form including but not limited to:
+  - [ ] Name
+  - [ ] Email
+- [ ] Links to third party (linkedin)
+
+### SOLUTIONS - TRAINING
+Page template to include support for following content:
+- [ ] Title
+- [ ] Image
+- [ ] Text
+- [ ] Table
+- [ ] Contact Form including but not limited to:   
+  - [ ] Name
+  - [ ] Email
+- [ ] Use a dynamic for to animate/update content on the page depending on the pack that
+the user selects
+- [ ] Look into ways to add CRM and analytics in the packs
+
+### SOLUTIONS - LEAD GENERATION
+Page template to include support for following content:
+- [ ] Title
+- [ ] Graphic illustrations (not included in our scope - to be handled by third party)
+- [ ] Contact Form including but not limited to:   
+  - [ ] Name
+  - [ ] Email
+- [ ] Packages area including the following content:
+  - [ ] Images   
+  - [ ] Titles
+  - [ ] Text
+  - [ ] Other CTA
+  - [ ] Text
+  - [ ] Tables
+
+### RESOURCES
+(TBD)
+
+### BLOG
+Page template to include support for following content:
+- [ ] Index of all posts including:
+  - [ ] Title
+  - [ ] Excerpt
+  - [ ] Image
+  - [ ] Link to single post page including support for following content
+    - [ ] Title
+    - [ ] Embedded media (images and videos)
+    - [ ] Text
+    - [ ] Quotes
+    - [ ] Tables
+
+# Timeline: 
+
+- V1 wireframes - 11.11.15
+- V2 wireframes - 11.18.15
+- V3 wireframes - 1.8.16
+
+- V1 Design - 1.15.16
+- V2 Design - 1.22.16
+- V3 Design - 1.29.16
+
+- Front end delivery  - 2.12.16
+- Backend Delivery - 2.26.16
+- QA, content integration - 2.22.16 > 3.4.16
+
+### Launch 3.4.16 
 
 ## Content
 
@@ -19,21 +125,8 @@ Point your DocumentRoot at the /public folder to run the app. Or you can use ```
 - [Commands](#commands)
   - [start](#start)
   - [json-server](#json-server)
-  - [js](#js)
-  - [js:ci](#jsci)
-  - [browserify](#browserify)
-  - [styles](#styles)
-  - [scss](#scss)
-  - [scss:ci](#scssci)
-  - [watch](#watch)
-  - [watch:js](#watch)
-  - [watch:scss](#watch)
-  - [develop](#develop)
-  - [build](#build)
-  - [build:js](#buildjs)
-  - [build:scss](#buildscss)
-  - [build:css](#buildcss)
-  - [test](#test)
+  - [Build Commands](#build-commands)
+
 
 ## Requirements
 
@@ -101,10 +194,7 @@ Inside of the projet there are several commands you can use as a build tools and
 npm start
 ```
 
-This command will allow you to wake up the `http` server, and you will be able to access to the site at 
-the address that will be displayed on the console, you will be able to
-test internally with your other devices as well to acess to the site
-using an external IP.
+This command will allow you to wake up the `http` server, and you will be able to access to the site at `localhost:8000`, the command will be waiting for any response to the server you can run this command on the background or in another tab for preference, you can kill the server at any time just by typing `ctrl + c`.
 
 ### json-server  
 
@@ -116,160 +206,52 @@ This is very similar to the previous but instead it opens a server at
 port `3000` where you can access to fake APIs and you can create your
 own APIS and use that in your development process to test. 
 
-### js
+
+### Build Commands
+
+Several build commands are included. Each can be run for all file types or just a specific file type.
+
+- Use ```npm run <build_command>``` to run for all file types (where available).
+- Use ```npm run <file_type>:<build_command>``` to run for a specific file type [js, styles or templates].
+
+For example:
+
+- Run ```npm run watch``` whilst developing.
+- Run ```npm run build``` on the production server.
+- Run ```npm run ci``` in Travis.
+- Run ```npm run styles:watch``` to only watch scss files whilst developing..
+ 
+
+The build commands are:
+
+#### ci
 
 ```
-npm run js
+npm run ci
 ```
 
-Alias for the command `npm run browserify`, makes easier to remember and
-type.
+Runs Lint code sniffer on all file types [js and styles].
 
-### js:ci
-
-```
-npm run js:ci -s
-```
-
-Run the eslint script rules again every `.js` file inside of the app
-directory in order to follow the same rules to write consisten JS.
-
-### browserify
+#### dev
 
 ```
-npm run browserify
+npm run dev
 ```
 
-This command creates a single `.js` file from all the imports that are
-made on `app/app.js` and makes transformations as well from ES6, this
-script creates a source map as well so you can debug more easily where
-errors are generated or triggered from the code.
+Creates the dev versions (unminified with sourcemaps) of all file types [js, styles and template].
 
-
-### styles
+#### build
 
 ```
-npm run styles
+npm run dev
 ```
 
-This script runs the script above `scss` in order to generate the css
-file after that applies the autoprefixer script in order to avoid
-the need of write prefixer on some properties.
+Creates the production versions (minified) of all file types [js, styles and template].
 
-### autoprefix
-
-```
-npm run autoprefix
-```
-
-This command loops on the created `.css` file and adds the autoprefixer
-for different browsers on different properties to avoid the need to
-write that manually.
-
-### scss
-
-```
-npm run scss
-```
-
-This script compiles the sass files into a single css file with no
-minification, and adds a source map as well to the file to easy track
-the properties of each element.  
-
-**Note:** Please don't use this script directly since you are not
-going to have the autoprefixer feature if you do so, use `npm run styles` instead.
-
-### scss:ci
-
-```
-npm run scss:ci -s
-```
-
-This task applies the a sass lint on every `.scss` file inside of the app
-directory, in order to write consisten sass files.
-
-### watch
+#### watch
 
 ```
 npm run watch
 ```
 
-This command will watch any change on the `.js` and `.scss` files and
-will trigger the compilation of JS or SASS if it's the case with this
-you can avoid the need to run every time the taks to build the js or
-sass to css.
-
-### watch:js
-
-```
-npm run watch:js
-```
-
-This command will watch any change on the `.js` files and will generate
-the bundle file on development mode so we can follow any problem using
-the sourcemaps and avoid large wait times between compliation of assets.
-
-### watch:scss
-
-```
-npm run watch:scss
-```
-
-This command will watch any change on the `.scss` files and will generate
-the `.css` file on development mode so we can follow any problem using
-the sourcemaps generated it will run the the autoprefix as well.
-
-### develop
-
-```
-npm run develop
-```
-
-This tasks run the tasks: `styles` and `js`, which compiles all sass
-into a single CSS and all JS in a single JS as well, the files are
-develop friendly since includes the sourcemaps for easy develop process.
-
-### build
-
-```
-npm run build
-```
-
-This tasks removes the source maps, and creates minified versions of the
-CSS and JS files in order to be production ready.
-
-### build:js
-
-```
-npm run build:js
-```
-
-This task removes the source maps, and creates minified versions of the
-js file.
-
-### build:scss
-
-```
-npm run build:scss
-```
-
-This task removes the source maps, and creates minified versions of the
-CSS file.
-
-### build:css
-
-```
-npm run build:css
-```
-
-This task creates a single CSS version with autoprefix, minified version
-and with no source map to be production ready.
-
-### test
-
-```
-npm test
-```
-
-Task that runs the JS and CSS lint used for travis in order to have a CI
-sytem before tests. 
+Watches for changes on all file types and runs their dev task when detected [js, styles and template].

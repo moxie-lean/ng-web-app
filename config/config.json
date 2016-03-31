@@ -1,0 +1,11 @@
+{
+  "production": {
+    "apiBase": "https://api.XXXXX.com/"
+  },
+  "staging": {
+    "apiBase": "http://api.XXXXX.moxie-staging.com/"
+  },
+  "dev": {
+    "apiBase": "http://localhost:3000/"
+  }
+}

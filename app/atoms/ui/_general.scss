@@ -1,0 +1,30 @@
+// put a hard limit on how narrow the screen can be: 320px
+body {
+  min-width: 320px;
+}
+
+// container class, for all sections that need to fill the screen with color beyond their limit
+.container {
+  @include outer-container;
+  @include padding(null 10px);
+
+  @include media($tablet){
+    @include padding(null 0);
+  }
+}
+
+.container-extended {
+  @include outer-container;
+  width: 96%;
+  max-width: $max-width-extended;
+}
+
+.container-special {
+  @include outer-container;
+  max-width: $max-width;
+}
+
+.container-nolimit {
+  @include outer-container;
+  max-width: 100%;
+}

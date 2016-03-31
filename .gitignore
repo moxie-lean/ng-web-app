@@ -6,9 +6,8 @@ tmp
 .DS_Store
 .idea
 public/build/
-npm-debug.log
+npm-debug.log*
 config/*.local.*
 public/*
-!public/index.html
+!public/*.html
 .idea
-www

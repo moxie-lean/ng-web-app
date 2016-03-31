@@ -1,0 +1,26 @@
+body {
+  @include fontSize(15px);
+  font-family: $primary-font;
+  font-weight:400;
+  letter-spacing: 0.04em;
+  line-height: 1.5em;
+  color: $body;
+}
+
+p {
+  margin-bottom: 2.4em;
+}
+
+blockquote {
+  @include fontSize(20px);
+  font-family: Georgia;
+  font-style: italic;
+  line-height: 1.4em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+%title_thin {
+  font-family: $primary-font;
+  font-weight: 100;
+}

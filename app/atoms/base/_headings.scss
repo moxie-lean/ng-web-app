@@ -1,3 +1,30 @@
 h1, h2, h3, h4, h5, h6 {
-  color: green;
+  color: $heading;
+  line-height: 1em;
+  font-weight: 400;
 }
+
+h1 {
+  @include fontSize (32px);
+}
+
+h2 {
+  @include fontSize (28px);
+}
+
+h3 {
+  @include fontSize (24px);
+}
+
+h4 {
+  @include fontSize (14px);
+}
+
+h5 {
+  @include fontSize (12px);
+}
+
+h6 {
+  @include fontSize (10px);
+}
+
