@@ -1,11 +1,6 @@
-%button_default {
-
-}
-
 a,
 button{
   &.a__button{
-    @extend %button_default;
     background: $button_bg;
     color: $button_text;
 
@@ -17,8 +12,6 @@ button{
 }
 
 button {
-  @extend %button_transition;
-
   &:not([disabled]):hover {
     color: $button_text;
   }
