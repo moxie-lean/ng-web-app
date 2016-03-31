@@ -1,39 +1,4 @@
 /* font defintions */
 
-$font_montserrat: "Montserrat", sans-serif;
-
-@font-face {
-  font-family: "Museo Sans Cyrl";
-  src:  url("../fonts/museo-sans/museo-sans-cyrl.eot");
-  src:  url("../fonts/museo-sans/museo-sans-cyrl.eot") format("embedded-opentype"), url("../fonts/museo-sans/museo-sans-cyrl.ttf") format("truetype"), url("../fonts/museo-sans/museo-sans-cyrl.woff") format("woff"), url("../fonts/museo-sans/museo-sans-cyrl.svg") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-body {
-  @include fontSize(15px);
-  font-family: $font_montserrat;
-  font-weight:400;
-  letter-spacing: 0.04em;
-  line-height: 1.5em;
-  color: $body;
-}
-
-p {
-  margin-bottom: 2.4em;
-}
-
-blockquote {
-  @include fontSize(20px);
-  font-family: Georgia;
-  font-style: italic;
-  line-height: 1.4em;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-%title_thin {
-  font-family: "Museo Sans Cyrl", sans-serif;
-  font-weight: 100;
-}
+$font_arial: "Arial", sans-serif;
+$primary-font: $font_arial;
