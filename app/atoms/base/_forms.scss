@@ -8,7 +8,7 @@ input {
 
   &.ng-dirty:not(.ng-empty) {
     &.ng-invalid {
-      border-color: red;
+      border-color: $form_error;
     }
     &.ng-valid {
       border-color: transparent;

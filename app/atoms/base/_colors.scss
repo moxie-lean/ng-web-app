@@ -4,7 +4,7 @@
 // (you can delete the example below).
 
 $_black_pearl: #1E2330;
-
+$_red: #FF0000;
 
 // Put color usages here and assign them a color from above .
 // You can use these variables anywhere else.
@@ -28,3 +28,7 @@ $button_text: $_black_pearl;
 $button_bg: $_black_pearl;
 $button_hover_text: $_black_pearl;
 $button_hover_bg: $_black_pearl;
+
+
+// Form
+$form_error: $_red;
