@@ -1,3 +1,7 @@
+/* Variables */
+
+$container-width: $max-width;
+
 /* media queries */
 $mobile_xs: new-breakpoint(max-width 319px 12);
 $mobile_s: new-breakpoint(min-width 320px 12);
@@ -5,3 +9,4 @@ $mobile_l: new-breakpoint(min-width 480px 12);
 $tablet: new-breakpoint(min-width 768px 12);
 $desktop: new-breakpoint(min-width 960px 12);
 
+$container: new-breakpoint(min-width $container-width 12);
