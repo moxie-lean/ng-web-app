@@ -1,11 +1,12 @@
 {
-  "name": "leean-angular",
+  "name": "web-app",
   "private": true,
   "version": "0.1.0",
   "description": "An atomic starter project for Leean",
-  "repository": "https://github.com/moxie-leean/leean-angular",
+  "repository": "https://github.com/moxie-leean/web-app",
   "license": "MIT",
   "devDependencies": {
+    "aliasify": "^1.9.0",
     "autoprefixer": "^6.3.3",
     "babel-preset-es2015": "^6.5.0",
     "babelify": "^7.2.0",
@@ -16,8 +17,13 @@
     "eslint": "^1.10.3",
     "eslint-plugin-angular": "^0.15.0",
     "gulp": "^3.9.0",
+    "gulp-angular-templatecache": "^1.8.0",
     "gulp-env": "^0.4.0",
+    "gulp-ng-constant": "^1.1.0",
+    "http-server": "^0.6.1",
     "json-server": "^0.8.8",
+    "ln-cms": "^0.3.1",
+    "ln-filters": "^0.3.1",
     "node-sass": "^3.4.2",
     "npm-run-all": "^1.5.1",
     "onchange": "^2.0.0",
@@ -32,32 +38,47 @@
     "transform": [
       "babelify",
       "browserify-shim",
-      "stringify"
+      "stringify",
+      "aliasify"
     ]
   },
   "browserify-shim": {
     "jQuery": "global:jQuery",
     "angular": "global:angular"
   },
+  "aliasify": {
+    "aliases": {
+      "atoms": "./app/atoms",
+      "molecules": "./app/molecules",
+      "organisms": "./app/organisms",
+      "template": "./app/templates",
+      "components": "./app/components",
+      "default-link": "ln-cms/default-link"
+    }
+  },
   "scripts": {
-    "postinstall": "bower install && mkdir -p public/js public/css public/img && npm run develop",
-    "start": "browser-sync start --server public --files 'public/*.html, public/css/*.css, public/js/*.js'",
-    "json-server": "json-server --watch config/json/db.json",
-    "watch": "npm-run-all -p watch:js watch:sass",
-    "browserify": "browserify ./app/app.js -d > ./public/js/bundle.js",
-    "js": "npm run browserify",
+    "postinstall": "bower install && mkdir -p public/js public/css public/img && npm run dev",
+    "json-server": "json-server --watch config/json/db.json --port 3000 --static ./htdocs",
+    "start": "browser-sync start --port 8000 --server public --files 'public/*.html, public/css/*.css, public/js/*.js'",
+    "ci": "npm run js:ci -s && npm run styles:ci -s",
+    "dev": "npm run config:dev && npm run js:dev && npm run styles:dev && npm run templates:dev",
+    "staging": "npm run config:staging && npm run js:build && npm run styles:build && npm run templates:build",
+    "build": "npm run config:build && npm run js:build && npm run styles:build && npm run templates:build",
+    "watch": "npm run dev && npm-run-all -p js:watch styles:watch templates:watch",
     "js:ci": "eslint app/\\*\\*/\\*.js",
-    "scss": "node-sass app/style.scss -o public/css/ --source-map-embed",
-    "scss:ci": "sass-lint app/\\*\\*/\\*.scss -v -q",
-    "styles": "npm run scss && npm run autoprefix",
-    "autoprefix": "postcss -u autoprefixer -r public/css/style.css",
-    "watch:js": "watchify ./app/app.js -d -o public/js/bundle.js -v",
-    "watch:sass": "onchange app/\\*\\*/\\*.scss -- npm run styles",
-    "build:js": "uglifyjs public/js/bundle.js -m -c -o public/js/bundle.js",
-    "build:scss": "node-sass app/style.scss --output-style compressed -o public/css/",
-    "build:css": "npm run build:scss && npm run autoprefix",
-    "build": "npm run build:js && npm run build:css",
-    "develop": "npm run styles && npm run js",
-    "test": "npm run js:ci -s && npm run scss:ci -s"
+    "js:dev": "browserify ./app/app.js -d > ./public/js/bundle.js",
+    "js:build": "npm run js:dev && uglifyjs public/js/bundle.js -m -c -o public/js/bundle.js",
+    "js:watch": "onchange app/\\*\\*/\\*.js -- npm run js:dev",
+    "styles:ci": "sass-lint app/\\*\\*/\\*.scss -v -q",
+    "styles:dev": "node-sass app/style.scss -o public/css/ --source-map-embed && npm run styles:autoprefix",
+    "styles:build": "node-sass app/style.scss --output-style compressed -o public/css/ && npm run styles:autoprefix",
+    "styles:watch": "onchange app/\\*\\*/\\*.scss -- npm run styles:dev",
+    "styles:autoprefix": "postcss -u autoprefixer -r public/css/style.css",
+    "templates:dev": "gulp templates",
+    "templates:build": "gulp templates",
+    "templates:watch": "onchange app/\\*\\*/\\*.html -- npm run templates:dev",
+    "config:dev": "gulp config:dev",
+    "config:staging": "gulp config:staging",
+    "config:build": "gulp config:build"
   }
 }

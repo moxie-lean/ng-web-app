@@ -1,4 +1,9 @@
 a {
-  color: orange;
+  color: $link;
   text-decoration: none;
+
+  &:hover {
+    color: $link_hover;
+    text-decoration: none;
+  }
 }

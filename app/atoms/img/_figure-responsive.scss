@@ -1,0 +1,16 @@
+%figure_responsive {
+  figure {
+    @include media($tablet) {
+      display: inline;
+      overflow: hidden;
+      height: auto;
+    }
+
+    position: relative;
+    width: 100%;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}

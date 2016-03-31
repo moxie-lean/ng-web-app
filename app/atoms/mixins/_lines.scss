@@ -1,0 +1,26 @@
+$margin_line_horizontal: 5em 0 1em 0;
+
+@mixin helper_content {
+  display: block;
+  content: $whitespace;
+}
+
+@mixin line_vertical {
+  @include helper_content;
+  height: 40%;
+  width: 1px;
+  background: $gray_chateau;
+  opacity: 0.4;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+}
+
+@mixin line_horizontal {
+  @include helper_content;
+  margin: $margin_line_horizontal;
+  height: 1px;
+  width: 100%;
+  background: $gray_chateau;
+  opacity: 0.4;
+}
