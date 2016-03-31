@@ -1,21 +1,21 @@
 @import "base/reset";
-@import "base/media";
 @import "base/colors";
 @import "base/fonts";
 @import "base/grid-settings";
+@import "base/media";
 @import "base/headings";
 @import "base/links";
 @import "base/forms";
-@import "base/icons";
 @import "base/lists";
 @import "base/icomoon";
 
+@import "mixins/omega-reset";
+@import "mixins/ellipsis-multiline";
+@import "mixins/lines";
+
 @import "buttons/default";
 
-@import "ui/lines";
 @import "ui/general";
 @import "ui/animations";
-@import "ui/ellipsis-multiline";
-
 
 @import "img/figure-responsive";
