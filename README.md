@@ -1,116 +1,9 @@
-# skaled.com
+> Barebones of an angular app with some features.
 
-# Useful links
-
-- [Staging](http://moxienyc:moxiestaging101@skaled.moxie-staging.com/)
-- [Style guide](https://projects.invisionapp.com/share/7G6AKII5R#/screens)
-
-# Scope of Work
-
-## Templates 
-- [ ] Home / Landing
-- [ ] About
-  - [ ] Our Approach
-  - [ ] Team & Careers   
-  - [ ] Contact
-- [ ] Solutions
-  - [ ] Lead Generation
-  - [ ] Training & Consulting 
-- [ ] Resources
-- [ ] Blog
-
-### GLOBAL
-- [ ] Navigation - We will add a script field in the back end to add tags and other scripts in:   
-  - [ ] Header
-  - [ ] Footer
-- [ ] Skaled's Branding (colors, logos, etc.)
-
-### HOME PAGE
-Page template to include support for following content:
-- [ ] Title
-- [ ] Images
-- [ ] Text
-- [ ] Testimonials
-
-### ABOUT - APPROACH
-Page template to include support for following content:
-- [ ] Title
-- [ ] Images
-- [ ] Text
-- [ ] Contact Form including but not limited to:   
-  - [ ] Name
-  - [ ] Email 
-
-### ABOUT - TEAM
-Page template to include support for following content:
-- [ ] Title
-- [ ] Images
-- [ ] Text
-- [ ] Table
-- [ ] Contact Form including but not limited to:
-  - [ ] Name
-  - [ ] Email
-- [ ] Links to third party (linkedin)
-
-### SOLUTIONS - TRAINING
-Page template to include support for following content:
-- [ ] Title
-- [ ] Image
-- [ ] Text
-- [ ] Table
-- [ ] Contact Form including but not limited to:   
-  - [ ] Name
-  - [ ] Email
-- [ ] Use a dynamic for to animate/update content on the page depending on the pack that
-the user selects
-- [ ] Look into ways to add CRM and analytics in the packs
-
-### SOLUTIONS - LEAD GENERATION
-Page template to include support for following content:
-- [ ] Title
-- [ ] Graphic illustrations (not included in our scope - to be handled by third party)
-- [ ] Contact Form including but not limited to:   
-  - [ ] Name
-  - [ ] Email
-- [ ] Packages area including the following content:
-  - [ ] Images   
-  - [ ] Titles
-  - [ ] Text
-  - [ ] Other CTA
-  - [ ] Text
-  - [ ] Tables
-
-### RESOURCES
-(TBD)
-
-### BLOG
-Page template to include support for following content:
-- [ ] Index of all posts including:
-  - [ ] Title
-  - [ ] Excerpt
-  - [ ] Image
-  - [ ] Link to single post page including support for following content
-    - [ ] Title
-    - [ ] Embedded media (images and videos)
-    - [ ] Text
-    - [ ] Quotes
-    - [ ] Tables
-
-# Timeline: 
-
-- V1 wireframes - 11.11.15
-- V2 wireframes - 11.18.15
-- V3 wireframes - 1.8.16
-
-- V1 Design - 1.15.16
-- V2 Design - 1.22.16
-- V3 Design - 1.29.16
-
-- Front end delivery  - 2.12.16
-- Backend Delivery - 2.26.16
-- QA, content integration - 2.22.16 > 3.4.16
-
-### Launch 3.4.16 
+- Work with ES2015
+- Create fake API
+- Compile SASS
+- Setup variables for different ENVS
 
 ## Content
 
@@ -126,7 +19,6 @@ Page template to include support for following content:
   - [start](#start)
   - [json-server](#json-server)
   - [Build Commands](#build-commands)
-
 
 ## Requirements
 
