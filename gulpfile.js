@@ -56,14 +56,18 @@ gulp.task('js:build', function() {
 });
 
 gulp.task('js:dev', function() {
-  return browserifiedDebug(false);
+  return browserify(projectPath + 'app.js', {
+    debug: true
+  })
+    .transform(babelify, {
+      presets: ['es2015']
+    })
+    .bundle()
+    .pipe(source('bundle.js'))
+    .pipe(gulp.dest(outputPath + 'js'));
 });
 
 gulp.task('js:watch', [], function() {
-  return browserifiedDebug(true);
-});
-
-function browserifiedDebug(watch) {
   var bundler = browserify({
     entries: [projectPath + 'app.js'],
     extensions: ['.js'],
@@ -89,13 +93,11 @@ function browserifiedDebug(watch) {
       .pipe(gulp.dest(outputPath + 'js'));
   };
 
-  if (watch) {
-    bundler.plugin(watchify);
-    bundler.on('update', rebundle);
-  }
+  bundler.plugin(watchify);
+  bundler.on('update', rebundle);
 
   return rebundle();
-}
+});
 
 /*********************************************************
  * Environment Config
