@@ -7,6 +7,8 @@ var gulp = require('gulp');
 var templateCache = require('gulp-angular-templatecache');
 var ngConstant = require('gulp-ng-constant');
 
+var fs = require('fs');
+
 /*********************************************************
  * Vars
  ********************************************************/
@@ -33,8 +35,20 @@ gulp.task('templates', function() {
  ********************************************************/
 
 var configFunc = function(env) {
-  var myConfig = require('./' + configPath + 'config.json');
+  var config = './' + configPath + 'config.json';
+  var localConfig = './' + configPath + 'config.local.json';
+  var myConfig;
+
+  if (fs.existsSync(localConfig)) {
+    console.log('Using local config file: ' + localConfig);
+    myConfig = require(localConfig);
+  } else {
+    console.log('Using default config file: ' + config);
+    myConfig = require(config);
+  }
+
   var envConfig = myConfig[env];
+
   return ngConstant({
     constants: envConfig,
     stream: true

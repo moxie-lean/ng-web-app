@@ -60,9 +60,9 @@ Your API will be available at [http://localhost:3000/](http://localhost:3000/), 
 See the [JSON Server Documentation](https://github.com/typicode/json-server) for more options.
 
 ### Set-up ENV Variables
-Add and edit the production settings in ```config/env.prod.json```. These are committed to git.
+Edit the config settings in ```config/config.json```. These are committed to git.
 
-You can create a copy called ```config/env.local.json``` which will be loaded instead if it exists. This is not committed to git (it's in .gitignore).
+You can create a copy called ```config/config.local.json``` which will be loaded instead if it exists. This is not committed to git (it's in .gitignore).
 
 ## Automatic commands
 
