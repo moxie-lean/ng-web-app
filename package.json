@@ -64,7 +64,7 @@
     "dev": "npm run config:dev && npm run js:dev && npm run styles:dev && npm run templates:dev",
     "staging": "npm run config:staging && npm run js:build && npm run styles:build && npm run templates:build",
     "build": "npm run config:build && npm run js:build && npm run styles:build && npm run templates:build",
-    "watch": "npm run dev && npm-run-all -p js:watch styles:watch templates:watch",
+    "watch": "npm run dev && npm-run-all -p js:watch styles:watch templates:watch config:watch",
     "js:ci": "eslint app/\\*\\*/\\*.js",
     "js:dev": "browserify ./app/app.js -d > ./public/js/bundle.js",
     "js:build": "npm run js:dev && uglifyjs public/js/bundle.js -m -c -o public/js/bundle.js",
@@ -79,6 +79,7 @@
     "templates:watch": "onchange app/\\*\\*/\\*.html -- npm run templates:dev",
     "config:dev": "gulp config:dev",
     "config:staging": "gulp config:staging",
-    "config:build": "gulp config:build"
+    "config:build": "gulp config:build",
+    "config:watch": "onchange config/config.json -- npm-run-all -s config:dev js:dev"
   }
 }
