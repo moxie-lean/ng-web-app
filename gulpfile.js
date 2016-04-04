@@ -16,6 +16,8 @@ var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var watchify = require('watchify');
 
+var fs = require('fs');
+
 /*********************************************************
  * Vars
  ********************************************************/
@@ -104,8 +106,20 @@ gulp.task('js:watch', [], function() {
  ********************************************************/
 
 var configFunc = function(env) {
-  var myConfig = require('./' + configPath + 'config.json');
+  var config = './' + configPath + 'config.json';
+  var localConfig = './' + configPath + 'config.local.json';
+  var myConfig;
+
+  if (fs.existsSync(localConfig)) {
+    console.log('Using local config file: ' + localConfig);
+    myConfig = require(localConfig);
+  } else {
+    console.log('Using default config file: ' + config);
+    myConfig = require(config);
+  }
+
   var envConfig = myConfig[env];
+
   return ngConstant({
     constants: envConfig,
     stream: true

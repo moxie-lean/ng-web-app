@@ -1,38 +1,104 @@
 {
+  "routes": [
+    {
+      "url": "/",
+      "state": "home",
+      "template": "home",
+      "endpoint": "post",
+      "params": {
+        "id": 5
+      }
+    },
+    {
+      "state": "blogIndex",
+      "url": "/blog",
+      "template": "blog",
+      "endpoint": "collection",
+      "params": {
+        "post_type": "blog"
+      }
+    },
+    {
+      "state": "blogSingle",
+      "url": "/blog/:slug",
+      "template": "blog-single",
+      "endpoint": "post",
+      "params": {
+        "slug": ":slug"
+      }
+    }
+  ],
   "static": {
     "site_title": "XXXXX",
-    "logo": "img/general/logo-header.svg",
-    "main_menu": {
-      "slug": "main_menu",
-      "items": [
+    "site_description": "A site about XXXXX",
+    "site_logo": "img/general/logo-header.svg",
+    "site_icon": "img/general/favicon.svg",
+    "menus": {
+      "main_menu": [
         {
           "title": "",
-          "link": "#/"
+          "link": "/"
         },
         {
           "title": "",
-          "link": "#/",
-          "sub_menu": [
+          "link": "/",
+          "items": [
             {
               "title": "",
-              "link": "#/"
+              "link": "/"
             },
             {
               "title": "",
-              "link": "#/"
+              "link": "/"
             }
           ]
         }
       ]
     },
-    "widgets": {},
-    "footer": {}
+    "widgets": {
+      "footer_1": [
+        {
+          "type": "leean-preview",
+          "content": {
+            "title": "Upcoming events",
+            "leeanpreview": {
+              "items": [
+                {
+                  "title": "",
+                  "description": "",
+                  "button_text": "Read more",
+                  "link": "",
+                  "new_window": false
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "leean-preview",
+          "content": {
+            "title": "Interesting Articles",
+            "leeanpreview": {
+              "items": [
+                {
+                  "title": "",
+                  "description": "",
+                  "button_text": "Read more",
+                  "link": "",
+                  "new_window": false
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
   },
   "post": [
     {
-      "post_id": 5,
+      "id": 5,
       "slug": "/",
-      "type": "page-home",
+      "template": "home",
       "content": {
         "title": "Home",
         "content": ""
@@ -40,11 +106,26 @@
       "meta": {}
     },
     {
-      "post_id": 10,
-      "slug": "/contact-us",
-      "template": "contact",
+      "id": 10,
+      "slug": "/sample-blog-post",
+      "template": "blog-single",
       "content": {},
       "meta": {}
+    },
+    {
+      "id": 15,
+      "slug": "/sample-blog-post-2",
+      "template": "blog-single",
+      "content": {},
+      "meta": {}
+    }
+  ],
+  "collection": [
+    {
+      "id": 10
+    },
+    {
+      "id": 15
     }
   ]
 }
