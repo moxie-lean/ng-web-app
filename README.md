@@ -248,6 +248,8 @@ npm run dev
 
 Creates the production versions (minified) of all file types [js, styles and template].
 
+Note that Angular dependencies are automatically injected before minifying. This means there is no need to use ```x.$inject = []```.
+
 #### watch
 
 ```
