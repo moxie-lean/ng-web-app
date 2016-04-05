@@ -41,4 +41,27 @@ rules:
   quote:
     - 2
     -
-      style: double
+      style: single
+  brace-style:
+    - 2
+    -
+      style: 1tbs
+      allow-single-line: false
+  empty-line-between-blocks:
+    - 2
+    -
+      include: true
+  no-vendor-prefixes: 2
+  space-after-colon: 2
+  space-after-bang: 2
+  space-after-comma: 2
+  space-around-operator: 2
+  space-before-brace: 2
+  space-before-colon: 2
+  space-between-parens:
+    - 2
+    -
+      include: true
+  trailing-semicolon: 2
+  url-quotes: 2
+  zero-unit: 2
