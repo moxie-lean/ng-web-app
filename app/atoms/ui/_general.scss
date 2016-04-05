@@ -8,7 +8,7 @@ body {
   @include outer-container;
   @include padding(null 10px);
 
-  @include media($tablet){
+  @include media($tablet) {
     @include padding(null 0);
   }
 }

@@ -1,23 +1,23 @@
-@import "base/reset";
-@import "base/colors";
-@import "base/fonts";
-@import "base/grid-settings";
-@import "base/media";
-@import "base/headings";
-@import "base/links";
-@import "base/forms";
-@import "base/lists";
-@import "base/icomoon";
-@import "base/text";
+@import 'base/reset';
+@import 'base/colors';
+@import 'base/fonts';
+@import 'base/grid-settings';
+@import 'base/media';
+@import 'base/headings';
+@import 'base/links';
+@import 'base/forms';
+@import 'base/lists';
+@import 'base/icomoon';
+@import 'base/text';
 
 
-@import "mixins/omega-reset";
-@import "mixins/ellipsis-multiline";
-@import "mixins/lines";
+@import 'mixins/omega-reset';
+@import 'mixins/ellipsis-multiline';
+@import 'mixins/lines';
 
-@import "buttons/default";
+@import 'buttons/default';
 
-@import "ui/general";
-@import "ui/animations";
+@import 'ui/general';
+@import 'ui/animations';
 
-@import "img/figure-responsive";
+@import 'img/figure-responsive';

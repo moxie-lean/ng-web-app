@@ -51,17 +51,13 @@ rules:
     - 2
     -
       include: true
-  no-vendor-prefixes: 2
   space-after-colon: 2
   space-after-bang: 2
   space-after-comma: 2
   space-around-operator: 2
   space-before-brace: 2
   space-before-colon: 2
-  space-between-parens:
-    - 2
-    -
-      include: true
+  space-between-parens: 2
   trailing-semicolon: 2
   url-quotes: 2
   zero-unit: 2
