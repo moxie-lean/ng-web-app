@@ -1,15 +1,16 @@
 input {
   @include placeholder {
-    opacity:0.5;
+    opacity: 0.5;
   }
 
   border: 2px solid transparent;
-  width:100%;
+  width: 100%;
 
-  &.ng-dirty:not(.ng-empty) {
+  &.ng-dirty:not(  .ng-empty  ) {
     &.ng-invalid {
       border-color: $form_error;
     }
+
     &.ng-valid {
       border-color: transparent;
     }

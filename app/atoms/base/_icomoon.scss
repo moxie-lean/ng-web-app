@@ -1,19 +1,19 @@
-$icons_id: "9rc3go";
+$icons_id: '9rc3go';
 
 @font-face {
-  font-family: "icomoon";
-  src:  url("../fonts/icomoon/icomoon.eot?#{$icons_id}");
-  src:  url("../fonts/icomoon/icomoon.eot?#{$icons_id}#iefix") format("embedded-opentype"),
-  url("../fonts/icomoon/icomoon.ttf?#{$icons_id}") format("truetype"),
-  url("../fonts/icomoon/icomoon.woff?#{$icons_id}") format("woff"),
-  url("../fonts/icomoon/icomoon.svg?#{$icons_id}#icomoon") format("svg");
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon/icomoon.eot?#{$icons_id}');
+  src: url('../fonts/icomoon/icomoon.eot?#{$icons_id}#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon/icomoon.ttf?#{$icons_id}') format('truetype'),
+  url('../fonts/icomoon/icomoon.woff?#{$icons_id}') format('woff'),
+  url('../fonts/icomoon/icomoon.svg?#{$icons_id}#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^='icon-'], [class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon";
+  font-family: 'icomoon';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -29,7 +29,7 @@ $icons_id: "9rc3go";
 // (you can delete the example below)
 
 .icon-up-arrow:before {
-  content: "\e901";
+  content: '\e901';
 }
 
 
