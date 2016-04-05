@@ -46,9 +46,7 @@ gulp.task('js:build', function() {
   return browserify(projectPath + 'app.js', {
     debug: false
   })
-    .transform(babelify, {
-      presets: ['es2015']
-    })
+    .transform(babelify)
     .bundle()
     .pipe(source('bundle.js'))
     .pipe(buffer())
@@ -61,9 +59,7 @@ gulp.task('js:dev', function() {
   return browserify(projectPath + 'app.js', {
     debug: true
   })
-    .transform(babelify, {
-      presets: ['es2015']
-    })
+    .transform(babelify)
     .bundle()
     .pipe(source('bundle.js'))
     .pipe(gulp.dest(outputPath + 'js'));
@@ -78,9 +74,7 @@ gulp.task('js:watch', [], function() {
     cache: {},
     packageCache: {}
   })
-    .transform('babelify', {
-      presets: ['es2015']
-    });
+    .transform('babelify');
 
   var rebundle = function() {
     var startDate = new Date();
