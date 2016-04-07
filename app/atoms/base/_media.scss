@@ -2,11 +2,40 @@
 
 $container-width: $max-width;
 
+//mobile
+$_mobile_xs_width: 319px;
+
+$_mobile_s_width: 320px;
+$_mobile_s_height: 568px;
+
+$_mobile_m_width: 375px;
+$_mobile_l_width: 480px;
+
+//Tablet
+$_tablet_width: 768px;
+
+//Desktop
+$_desktop_width: 960px;
+
 /* media queries */
-$mobile_xs: new-breakpoint(max-width 319px 12);
-$mobile_s: new-breakpoint(min-width 320px 12);
-$mobile_l: new-breakpoint(min-width 480px 12);
-$tablet: new-breakpoint(min-width 768px 12);
-$desktop: new-breakpoint(min-width 960px 12);
+
+//Mobile
+$mobile_xs: new-breakpoint(max-width $_mobile_xs_width 12);
+
+$mobile_s: new-breakpoint(min-width $_mobile_s_width 12);
+$mobile_s-portrait: new-breakpoint(min-width $_mobile_s_width orientation portrait 2);
+$mobile_s-landscape: new-breakpoint(min-width $_mobile_s_height orientation landscape 2);
+
+$mobile_m: new-breakpoint(min-width $_mobile_m_width 12);
+$mobile_m-portrait: new-breakpoint(min-width $_mobile_m_width orientation portrait 2);
+
+$mobile_l: new-breakpoint(min-width $_mobile_l_width 12);
+
+//Tablet
+$tablet: new-breakpoint(min-width $_tablet_width 12);
+$tablet-portrait: new-breakpoint(min-width $_tablet_width orientation portrait 2);
+
+//Desktop
+$desktop: new-breakpoint(min-width $_desktop_width 12);
 
 $container: new-breakpoint(min-width $container-width 12);
