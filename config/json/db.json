@@ -109,7 +109,13 @@
         "title": "Not Found",
         "content": ""
       },
-      "meta": {}
+      "meta": {
+        "title": "My AngularJS App - Not Found",
+        "tags": [
+          {"name": "description", "content": ""},
+          {"property": "og:locale", "content": "en_US"}
+        ]
+      }
     },
     {
       "id": 5,
@@ -118,19 +124,39 @@
         "title": "Home",
         "content": ""
       },
-      "meta": {}
+      "meta": {
+        "title": "My AngularJS App - Home",
+        "tags": [
+          {"name": "description", "content": ""},
+          {"property": "og:locale", "content": "en_US"}
+        ]
+      }
     },
     {
       "id": 10,
       "slug": "/sample-blog-post",
       "content": {},
-      "meta": {}
+      "meta": {
+        "title": "My AngularJS App - Sample Blog Post 1",
+        "tags": [
+          {"name": "description", "content": ""},
+          {"name": "twitter:card", "content": "summary"},
+          {"property": "og:locale", "content": "en_US"}
+        ]
+      }
     },
     {
       "id": 15,
       "slug": "/sample-blog-post-2",
       "content": {},
-      "meta": {}
+      "meta": {
+        "title": "My AngularJS App - Sample Blog Post 2",
+        "tags": [
+          {"name": "description", "content": ""},
+          {"name": "twitter:card", "content": "summary"},
+          {"property": "og:locale", "content": "en_US"}
+        ]
+      }
     }
   ],
   "collection": [
