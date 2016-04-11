@@ -1,6 +1,15 @@
 {
   "routes": [
     {
+      "url": "/not-found",
+      "state": "notFound",
+      "template": "not-found",
+      "endpoint": "post",
+      "params": {
+        "id": 1
+      }
+    },
+    {
       "url": "/",
       "state": "home",
       "template": "home",
@@ -10,8 +19,8 @@
       }
     },
     {
-      "state": "blogIndex",
       "url": "/blog",
+      "state": "blogIndex",
       "template": "blog",
       "endpoint": "collection",
       "params": {
@@ -19,13 +28,11 @@
       }
     },
     {
-      "state": "blogSingle",
       "url": "/blog/:slug",
+      "state": "blogSingle",
       "template": "blog-single",
       "endpoint": "post",
-      "params": {
-        "slug": ":slug"
-      }
+      "params": {}
     }
   ],
   "static": {
@@ -96,9 +103,17 @@
   },
   "post": [
     {
+      "id": 1,
+      "slug": "/not-found",
+      "content": {
+        "title": "Not Found",
+        "content": ""
+      },
+      "meta": {}
+    },
+    {
       "id": 5,
       "slug": "/",
-      "template": "home",
       "content": {
         "title": "Home",
         "content": ""
@@ -108,14 +123,12 @@
     {
       "id": 10,
       "slug": "/sample-blog-post",
-      "template": "blog-single",
       "content": {},
       "meta": {}
     },
     {
       "id": 15,
       "slug": "/sample-blog-post-2",
-      "template": "blog-single",
       "content": {},
       "meta": {}
     }
