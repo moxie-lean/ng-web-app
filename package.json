@@ -24,7 +24,7 @@
     "gulp-uglify": "^1.5.3",
     "http-server": "^0.6.1",
     "json-server": "^0.8.8",
-    "ln-cms": "^0.3.1",
+    "ln-cms": "^0.4.4",
     "ln-filters": "^0.3.1",
     "node-sass": "^3.4.2",
     "npm-run-all": "^1.5.1",
