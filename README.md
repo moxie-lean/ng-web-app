@@ -45,8 +45,9 @@ npm install
 
 [Download NPM / NodeJS](https://nodejs.org) first if you don't already have it installed globally.
 
-After you finished the installation of the dependencies you can run the
-script to build the dev version with: 
+After you finished the installation of the dependencies you must run the
+following script to build the dev version and the creation of some dir
+where all the asets live.
 
 ```
 npm run set-up
