@@ -59,7 +59,7 @@
     }
   },
   "scripts": {
-    "postinstall": "bower install && mkdir -p public/js public/css public/img && npm run dev",
+    "set-up": "bower install && mkdir -p public/js public/css public/img && npm run dev",
     "json-server": "json-server --watch config/json/db.json --port 3000 --static ./htdocs",
     "start": "browser-sync start --port 8000 --server public --files 'public/*.html, public/css/*.css, public/js/*.js'",
     "ci": "npm run js:ci -s && npm run styles:ci -s",

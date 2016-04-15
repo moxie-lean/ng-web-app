@@ -45,6 +45,15 @@ npm install
 
 [Download NPM / NodeJS](https://nodejs.org) first if you don't already have it installed globally.
 
+After you finished the installation of the dependencies you can run the
+script to build the dev version with: 
+
+```
+npm run set-up
+```
+
+The command will build the assets in `dev` mode.
+
 ### Create Fake API Data
 
 Design your API structure and add your fake JSON data to ```config/json/db.json``` (sample file included with this project for you to edit).  
