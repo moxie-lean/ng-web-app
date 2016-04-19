@@ -64,9 +64,9 @@
     "json-server": "json-server --watch config/json/db.json --port 3000 --static ./htdocs",
     "start": "browser-sync start --port 8000 --server public --files 'public/*.html, public/css/*.css, public/js/*.js'",
     "ci": "npm run js:ci -s && npm run styles:ci -s",
-    "dev": "npm run config:dev && npm run js:dev && npm run styles:dev && npm run templates:dev",
-    "staging": "npm run config:staging && npm run js:build && npm run styles:build && npm run templates:build",
-    "build": "npm run config:build && npm run js:build && npm run styles:build && npm run templates:build",
+    "dev": "npm run patterns:build && npm run config:dev && npm run js:dev && npm run styles:dev && npm run templates:dev",
+    "staging": "npm run patterns:build && npm run config:staging && npm run js:build && npm run styles:build && npm run templates:build",
+    "build": "npm run patterns:build && npm run config:build && npm run js:build && npm run styles:build && npm run templates:build",
     "watch": "npm run dev && npm-run-all -p js:watch styles:watch templates:watch config:watch",
     "js:ci": "eslint app/\\*\\*/\\*.js",
     "js": "npm run js:dev",
@@ -82,9 +82,10 @@
     "templates:dev": "gulp templates",
     "templates:build": "gulp templates",
     "templates:watch": "onchange app/\\*\\*/\\*.html -- npm run templates:dev",
-    "config:dev": "ln-patterns && gulp config:dev",
-    "config:staging": "ln-patterns && gulp config:staging",
-    "config:build": "ln-patterns && gulp config:build",
-    "config:watch": "onchange config/\\*.json -- npm-run-all -s config:dev js:dev"
+    "config:dev": "gulp config:dev",
+    "config:staging": "gulp config:staging",
+    "config:build": "gulp config:build",
+    "config:watch": "onchange config/\\*.json -- npm-run-all -s patterns:build config:dev js:dev",
+    "patterns:build": "ln-patterns"
   }
 }
