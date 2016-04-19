@@ -22,7 +22,6 @@
     "gulp-ng-annotate": "^2.0.0",
     "gulp-ng-constant": "^1.1.0",
     "gulp-uglify": "^1.5.3",
-    "http-server": "^0.6.1",
     "json-server": "^0.8.8",
     "ln-cms": "^0.4.6",
     "ln-filters": "^0.3.1",
@@ -61,7 +60,7 @@
     }
   },
   "scripts": {
-    "postinstall": "bower install && mkdir -p public/js public/css public/img && npm run dev",
+    "set-up": "bower install && mkdir -p public/js public/css public/img && npm run dev",
     "json-server": "json-server --watch config/json/db.json --port 3000 --static ./htdocs",
     "start": "browser-sync start --port 8000 --server public --files 'public/*.html, public/css/*.css, public/js/*.js'",
     "ci": "npm run js:ci -s && npm run styles:ci -s",
@@ -70,9 +69,11 @@
     "build": "npm run config:build && npm run js:build && npm run styles:build && npm run templates:build",
     "watch": "npm run dev && npm-run-all -p js:watch styles:watch templates:watch config:watch",
     "js:ci": "eslint app/\\*\\*/\\*.js",
+    "js": "npm run js:dev",
     "js:dev": "gulp js:dev",
     "js:build": "gulp js:build",
     "js:watch": "gulp js:watch",
+    "styles": "npm run styles:dev",
     "styles:ci": "sass-lint app/\\*\\*/\\*.scss -v -q",
     "styles:dev": "node-sass app/style.scss -o public/css/ --source-map-embed && npm run styles:autoprefix",
     "styles:build": "node-sass app/style.scss --output-style compressed -o public/css/ && npm run styles:autoprefix",
