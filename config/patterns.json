@@ -1,0 +1,95 @@
+{
+  "generatePatternsPage": true,
+  "customComponentsLocation": "../../app/",
+  "examplesBackgroundColor": "#FFFFFF",
+  "enabledComponents": [
+    {
+      "component": "atoms/h1",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Header 1",
+          "params": {
+            "title": "Title 1"
+          }
+        }
+      ]
+    },
+    {
+      "component": "atoms/h2",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Header 2",
+          "params": {
+            "title": "Title 2"
+          }
+        }
+      ]
+    },
+    {
+      "component": "atoms/h3",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Header 3",
+          "params": {
+            "title": "Title 3"
+          }
+        }
+      ]
+    },
+    {
+      "component": "atoms/a",
+      "custom": false,
+      "examples": [
+        {
+          "name": "A Link",
+          "params": {
+            "title": "Link",
+            "href": "#/patterns"
+          }
+        }
+      ]
+    },
+    {
+      "component": "molecules/menu",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Menu",
+          "params": {
+            "lnSelParentClass": "current-parent",
+            "lnSelItemClass": "current-item",
+            "lnParentIconClass": "icon icon-arrow-down",
+            "lnItems": [
+              {
+                "title": "Menu 1",
+                "link": "#/page1",
+                "new_window": false,
+                "items": []
+              },
+              {
+                "title": "Menu 2",
+                "link": "#/page2",
+                "new_window": false,
+                "items": [
+                  {
+                    "title": "Submenu 1",
+                    "link": "#/subpage1",
+                    "new_window": false
+                  },
+                  {
+                    "title": "Submenu 2",
+                    "link": "#/subpage2",
+                    "new_window": true
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

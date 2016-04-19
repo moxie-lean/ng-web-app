@@ -24,8 +24,9 @@
     "gulp-uglify": "^1.5.3",
     "http-server": "^0.6.1",
     "json-server": "^0.8.8",
-    "ln-cms": "^0.4.4",
+    "ln-cms": "^0.4.6",
     "ln-filters": "^0.3.1",
+    "ln-patternlab": "^0.1.0",
     "node-sass": "^3.4.2",
     "npm-run-all": "^1.5.1",
     "onchange": "^2.0.0",
@@ -80,9 +81,9 @@
     "templates:dev": "gulp templates",
     "templates:build": "gulp templates",
     "templates:watch": "onchange app/\\*\\*/\\*.html -- npm run templates:dev",
-    "config:dev": "gulp config:dev",
-    "config:staging": "gulp config:staging",
-    "config:build": "gulp config:build",
-    "config:watch": "onchange config/config.json -- npm-run-all -s config:dev js:dev"
+    "config:dev": "ln-patterns && gulp config:dev",
+    "config:staging": "ln-patterns && gulp config:staging",
+    "config:build": "ln-patterns && gulp config:build",
+    "config:watch": "onchange config/\\*.json -- npm-run-all -s config:dev js:dev"
   }
 }

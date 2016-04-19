@@ -4,10 +4,19 @@
       "url": "/not-found",
       "state": "notFound",
       "template": "not-found",
-      "endpoint": "post",
-      "params": {
-        "id": 1
-      }
+      "request": false
+    },
+    {
+      "url": "/patterns",
+      "state": "patterns",
+      "template": "patterns",
+      "request": false
+    },
+    {
+      "state": "patternsExamples",
+      "url": "/examples/:exampleId",
+      "template": "examples",
+      "request": false
     },
     {
       "url": "/",
@@ -103,21 +112,6 @@
   },
   "post": [
     {
-      "id": 1,
-      "slug": "/not-found",
-      "content": {
-        "title": "Not Found",
-        "content": ""
-      },
-      "meta": {
-        "title": "My AngularJS App - Not Found",
-        "tags": [
-          {"name": "description", "content": ""},
-          {"property": "og:locale", "content": "en_US"}
-        ]
-      }
-    },
-    {
       "id": 5,
       "slug": "/",
       "content": {
@@ -127,8 +121,14 @@
       "meta": {
         "title": "My AngularJS App - Home",
         "tags": [
-          {"name": "description", "content": ""},
-          {"property": "og:locale", "content": "en_US"}
+          {
+            "name": "description",
+            "content": ""
+          },
+          {
+            "property": "og:locale",
+            "content": "en_US"
+          }
         ]
       }
     },
@@ -139,9 +139,18 @@
       "meta": {
         "title": "My AngularJS App - Sample Blog Post 1",
         "tags": [
-          {"name": "description", "content": ""},
-          {"name": "twitter:card", "content": "summary"},
-          {"property": "og:locale", "content": "en_US"}
+          {
+            "name": "description",
+            "content": ""
+          },
+          {
+            "name": "twitter:card",
+            "content": "summary"
+          },
+          {
+            "property": "og:locale",
+            "content": "en_US"
+          }
         ]
       }
     },
@@ -152,9 +161,18 @@
       "meta": {
         "title": "My AngularJS App - Sample Blog Post 2",
         "tags": [
-          {"name": "description", "content": ""},
-          {"name": "twitter:card", "content": "summary"},
-          {"property": "og:locale", "content": "en_US"}
+          {
+            "name": "description",
+            "content": ""
+          },
+          {
+            "name": "twitter:card",
+            "content": "summary"
+          },
+          {
+            "property": "og:locale",
+            "content": "en_US"
+          }
         ]
       }
     }
