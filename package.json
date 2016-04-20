@@ -25,7 +25,7 @@
     "json-server": "^0.8.8",
     "ln-cms": "^0.4.6",
     "ln-filters": "^0.3.1",
-    "ln-patternlab": "^0.1.0",
+    "ln-patternlab": "^0.1.1",
     "node-sass": "^3.4.2",
     "npm-run-all": "^1.5.1",
     "onchange": "^2.0.0",
