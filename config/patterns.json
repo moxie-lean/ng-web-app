@@ -40,6 +40,42 @@
       ]
     },
     {
+      "component": "atoms/h4",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Header 4",
+          "params": {
+            "title": "Title 4"
+          }
+        }
+      ]
+    },
+    {
+      "component": "atoms/h5",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Header 5",
+          "params": {
+            "title": "Title 5"
+          }
+        }
+      ]
+    },
+    {
+      "component": "atoms/h6",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Header 6",
+          "params": {
+            "title": "Title 6"
+          }
+        }
+      ]
+    },
+    {
       "component": "atoms/a",
       "custom": false,
       "examples": [
@@ -48,6 +84,80 @@
           "params": {
             "title": "Link",
             "href": "#/patterns"
+          }
+        }
+      ]
+    },
+    {
+      "component": "atoms/button",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Button",
+          "params": {
+            "id": "exampleButton",
+            "text": "Click Me!"
+          }
+        }
+      ]
+    },
+    {
+      "component": "atoms/img",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Image",
+          "params": {
+            "src": "img/lean.png"
+          }
+        }
+      ]
+    },
+    {
+      "component": "atoms/label",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Label",
+          "params": {
+            "inputId": "exampleInput",
+            "text": "Label"
+          }
+        }
+      ]
+    },
+    {
+      "component": "atoms/li",
+      "custom": false,
+      "examples": [
+        {
+          "name": "List Item",
+          "params": {
+            "item": "Item"
+          }
+        }
+      ]
+    },
+    {
+      "component": "atoms/p",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Paragraph",
+          "params": {
+            "text": "Some example text inside paragraph."
+          }
+        }
+      ]
+    },
+    {
+      "component": "atoms/span",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Span",
+          "params": {
+            "text": "Some example text inside span."
           }
         }
       ]
