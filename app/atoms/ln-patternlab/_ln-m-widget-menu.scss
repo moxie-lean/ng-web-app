@@ -1,0 +1,9 @@
+.ln-m-widget-menu {
+  @extend %list_nobullets;
+  @extend %h4_caps;
+
+  li {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+}
