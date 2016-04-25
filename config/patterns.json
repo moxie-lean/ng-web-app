@@ -211,23 +211,21 @@
           "name": "Social networks widget",
           "params": {
             "class": "ln-m-widget-social",
-            "lnContent": {
-              "title": "",
-              "items": [
-                {
-                  "network": "twitter",
-                  "link": "//twitter.com/"
-                },
-                {
-                  "network": "facebook",
-                  "link": "//facebook.com/"
-                },
-                {
-                  "network": "linkedin",
-                  "link": "//linkedin.com/"
-                }
-              ]
-            }
+            "lnTitle": "",
+            "lnItems": [
+              {
+                "network": "twitter",
+                "link": "//twitter.com/"
+              },
+              {
+                "network": "facebook",
+                "link": "//facebook.com/"
+              },
+              {
+                "network": "linkedin",
+                "link": "//linkedin.com/"
+              }
+            ]
           }
         }
       ]
@@ -240,23 +238,21 @@
           "name": "Menu widget",
           "params": {
             "class": "ln-m-widget-menu",
-            "lnContent": {
-              "title": "Menu",
-              "items": [
-                {
-                  "title": "Page 1",
-                  "link": "/#/page1"
-                },
-                {
-                  "title": "Page 2",
-                  "link": "/#/page2"
-                },
-                {
-                  "title": "Page 3",
-                  "link": "/#/page3"
-                }
-              ]
-            }
+            "lnTitle": "Menu",
+            "lnItems": [
+              {
+                "title": "Page 1",
+                "link": "/#/page1"
+              },
+              {
+                "title": "Page 2",
+                "link": "/#/page2"
+              },
+              {
+                "title": "Page 3",
+                "link": "/#/page3"
+              }
+            ]
           }
         }
       ]
@@ -269,24 +265,22 @@
           "name": "Contact details widget",
           "params": {
             "class": "ln-m-widget-contact",
-            "lnContent": {
-              "title": "Contact Us",
-              "logo": {
-                "class": "logo",
-                "src": "https://avatars1.githubusercontent.com/u/15912467?v=3&s=50"
-              },
-              "address": {
-                "class": "address",
-                "text": "594 Broadway Suite 305<br>New York, NY 10012"
-              },
-              "phone": {
-                "class": "phone",
-                "number": "(855) 464 8269"
-              },
-              "email": {
-                "class": "email",
-                "address": "info@getmoxied.net"
-              }
+            "lnTitle": "Contact Us",
+            "lnLogo": {
+              "class": "logo",
+              "src": "https://avatars1.githubusercontent.com/u/15912467?v=3&s=50"
+            },
+            "lnAddress": {
+              "class": "address",
+              "text": "594 Broadway Suite 305<br>New York, NY 10012"
+            },
+            "lnPhone": {
+              "class": "phone",
+              "number": "(855) 464 8269"
+            },
+            "lnEmail": {
+              "class": "email",
+              "address": "info@getmoxied.net"
             }
           }
         }
@@ -300,23 +294,21 @@
           "name": "Preview widget",
           "params": {
             "class": "ln-m-widget-preview",
-            "lnContent": {
-              "title": "Upcoming Events",
-              "items": [
-                {
-                  "title": "Event 1",
-                  "description": "Event One",
-                  "button_text": "Read more",
-                  "link": "/#/event1"
-                },
-                {
-                  "title": "Event 2",
-                  "description": "Event Two",
-                  "button_text": "Read more",
-                  "link": "/#/event2"
-                }
-              ]
-            }
+            "lnTitle": "Upcoming Events",
+            "lnItems": [
+              {
+                "title": "Event 1",
+                "description": "Event One",
+                "button_text": "Read more",
+                "link": "/#/event1"
+              },
+              {
+                "title": "Event 2",
+                "description": "Event Two",
+                "button_text": "Read more",
+                "link": "/#/event2"
+              }
+            ]
           }
         }
       ]
@@ -329,21 +321,19 @@
           "name": "Downloads widget",
           "params": {
             "class": "ln-m-widget-downloads",
-            "lnContent": {
-              "title": "Downloads",
-              "items": [
-                {
-                  "title": "Document 1",
-                  "description": "Document One",
-                  "file": "http://www.pdf995.com/samples/pdf.pdf"
-                },
-                {
-                  "title": "Document 2",
-                  "description": "Document Two",
-                  "file": "http://www.pdf995.com/samples/pdf.pdf"
-                }
-              ]
-            }
+            "lnTitle": "Downloads",
+            "lnItems": [
+              {
+                "title": "Document 1",
+                "description": "Document One",
+                "file": "http://www.pdf995.com/samples/pdf.pdf"
+              },
+              {
+                "title": "Document 2",
+                "description": "Document Two",
+                "file": "http://www.pdf995.com/samples/pdf.pdf"
+              }
+            ]
           }
         }
       ]
@@ -358,10 +348,9 @@
             "lnWidgets": [
               {
                 "type": "ln-m-widget-menu",
-                "class": "ln-m-widget-menu",
-                "content": {
-                  "title": "Menu",
-                  "items": [
+                "params": {
+                  "lnTitle": "Menu",
+                  "lnItems": [
                     {
                       "title": "Page 1",
                       "link": "/#/page1"
@@ -369,20 +358,15 @@
                     {
                       "title": "Page 2",
                       "link": "/#/page2"
-                    },
-                    {
-                      "title": "Page 3",
-                      "link": "/#/page3"
                     }
                   ]
                 }
               },
               {
                 "type": "ln-m-widget-social",
-                "class": "ln-m-widget-social",
-                "content": {
-                  "title": "",
-                  "items": [
+                "params": {
+                  "lnTitle": "Social",
+                  "lnItems": [
                     {
                       "network": "twitter",
                       "link": "//twitter.com/"
