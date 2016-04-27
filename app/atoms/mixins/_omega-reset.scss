@@ -1,13 +1,18 @@
 // ------------------------------------------------------------
 // Omega Reset
 // ------------------------------------------------------------
-
 @mixin omega-reset($nth) {
   &:nth-child(#{$nth}) {
     margin-right: flex-gutter();
   }
+  $has-n: str-index(#{$nth}, 'n');
+  @if $has-n != null {
+    $next: #{$nth} + 1;
+  } @else {
+    $next: #{$nth + 'n'} + 1;
+  }
 
-  &:nth-child(#{$nth}+1) {
+  &:nth-child(#{$next}) {
     clear: none;
   }
 }
