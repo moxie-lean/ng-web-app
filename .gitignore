@@ -11,3 +11,4 @@ config/*.local.*
 public/*
 !public/*.html
 .idea
+!public/*.ico
