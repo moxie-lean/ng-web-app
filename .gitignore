@@ -14,3 +14,4 @@ public/*
 !public/img
 !public/fonts
 .idea
+!public/*.ico
