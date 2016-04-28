@@ -215,15 +215,18 @@
             "lnItems": [
               {
                 "network": "twitter",
-                "link": "//twitter.com/"
+                "link": "//twitter.com/",
+                "new_window": true
               },
               {
                 "network": "facebook",
-                "link": "//facebook.com/"
+                "link": "//facebook.com/",
+                "new_window": true
               },
               {
                 "network": "linkedin",
-                "link": "//linkedin.com/"
+                "link": "//linkedin.com/",
+                "new_window": true
               }
             ]
           }
@@ -266,22 +269,10 @@
           "params": {
             "class": "ln-m-widget-contact",
             "lnTitle": "Contact Us",
-            "lnLogo": {
-              "class": "logo",
-              "src": "https://avatars1.githubusercontent.com/u/15912467?v=3&s=50"
-            },
-            "lnAddress": {
-              "class": "address",
-              "text": "594 Broadway Suite 305<br>New York, NY 10012"
-            },
-            "lnPhone": {
-              "class": "phone",
-              "number": "(855) 464 8269"
-            },
-            "lnEmail": {
-              "class": "email",
-              "address": "info@getmoxied.net"
-            }
+            "lnLogo": "https://avatars1.githubusercontent.com/u/15912467?v=3&s=50",
+            "lnAddress": "594 Broadway Suite 305<br>New York, NY 10012",
+            "lnPhone": "(855) 464 8269",
+            "lnEmail": "info@getmoxied.net"
           }
         }
       ]
@@ -295,20 +286,23 @@
           "params": {
             "class": "ln-m-widget-preview",
             "lnTitle": "Upcoming Events",
-            "lnItems": [
-              {
-                "title": "Event 1",
-                "description": "Event One",
-                "button_text": "Read more",
-                "link": "/#/event1"
-              },
-              {
-                "title": "Event 2",
-                "description": "Event Two",
-                "button_text": "Read more",
-                "link": "/#/event2"
-              }
-            ]
+            "lnLeanpreview": {
+              "items": [
+                {
+                  "title": "Event 1",
+                  "description": "Event One",
+                  "button_text": "Read more",
+                  "link": "/#/event1"
+                },
+                {
+                  "title": "Event 2",
+                  "description": "Event Two",
+                  "button_text": "Read more",
+                  "link": "/#/event2",
+                  "new_window": true
+                }
+              ]
+            }
           }
         }
       ]
@@ -322,16 +316,45 @@
           "params": {
             "class": "ln-m-widget-downloads",
             "lnTitle": "Downloads",
+            "lnLeandownloads": {
+              "items": [
+                {
+                  "title": "Document 1",
+                  "description": "Document One",
+                  "file": {
+                    "url": "http://www.pdf995.com/samples/pdf.pdf"
+                  }
+                },
+                {
+                  "title": "Document 2",
+                  "description": "Document Two",
+                  "file": {
+                    "url": "http://www.pdf995.com/samples/pdf.pdf"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "component": "molecules/widget-recent",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Recent widget",
+          "params": {
+            "class": "ln-m-widget-recent",
+            "lnTitle": "Recent",
             "lnItems": [
               {
-                "title": "Document 1",
-                "description": "Document One",
-                "file": "http://www.pdf995.com/samples/pdf.pdf"
+                "title": "Post 1",
+                "file": "/#/post1"
               },
               {
-                "title": "Document 2",
-                "description": "Document Two",
-                "file": "http://www.pdf995.com/samples/pdf.pdf"
+                "title": "Post 2",
+                "file": "/#/post2"
               }
             ]
           }
@@ -347,10 +370,10 @@
           "params": {
             "lnWidgets": [
               {
-                "type": "ln-m-widget-menu",
-                "params": {
-                  "lnTitle": "Menu",
-                  "lnItems": [
+                "type": "lean-menu",
+                "content": {
+                  "title": "Menu",
+                  "items": [
                     {
                       "title": "Page 1",
                       "link": "/#/page1"
@@ -363,10 +386,10 @@
                 }
               },
               {
-                "type": "ln-m-widget-social",
-                "params": {
-                  "lnTitle": "Social",
-                  "lnItems": [
+                "type": "lean-social-links",
+                "content": {
+                  "title": "Social",
+                  "items": [
                     {
                       "network": "twitter",
                       "link": "//twitter.com/"

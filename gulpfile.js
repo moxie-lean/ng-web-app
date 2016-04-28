@@ -33,7 +33,10 @@ gulp.task('templates', function() {
   return gulp.src(projectPath + '**/*.html')
     .pipe(templateCache({
       module: 'templateCache',
-      standalone: true
+      standalone: true,
+      transformUrl: function (url) {
+        return url.replace('custom/', '');
+      }
     }))
     .pipe(gulp.dest(outputPath + 'js'));
 });

@@ -1,6 +1,10 @@
 .ln-m-widget-social {
   @include fontSize(16.7px);
 
+  h4 {
+    text-transform: uppercase;
+  }
+
   ul {
     margin: 0;
     padding: 0;

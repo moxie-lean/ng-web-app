@@ -74,16 +74,16 @@
     "widgets": {
       "footer_1": [
         {
-          "type": "leean-preview",
+          "type": "lean-preview",
           "content": {
             "title": "Upcoming events",
-            "leeanpreview": {
+            "leanpreview": {
               "items": [
                 {
-                  "title": "",
-                  "description": "",
+                  "title": "Event 1",
+                  "description": "Event One",
                   "button_text": "Read more",
-                  "link": "",
+                  "link": "/#/event1",
                   "new_window": false
                 }
               ]
@@ -91,16 +91,16 @@
           }
         },
         {
-          "type": "leean-preview",
+          "type": "lean-preview",
           "content": {
             "title": "Interesting Articles",
-            "leeanpreview": {
+            "leanpreview": {
               "items": [
                 {
-                  "title": "",
-                  "description": "",
+                  "title": "Article 1",
+                  "description": "Article One",
                   "button_text": "Read more",
-                  "link": "",
+                  "link": "/#/article1",
                   "new_window": false
                 }
               ]

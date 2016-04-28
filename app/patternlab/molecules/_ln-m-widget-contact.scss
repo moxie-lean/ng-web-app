@@ -2,6 +2,10 @@ $_phone_prefix: 'T';
 $_email_prefix: 'E';
 
 .ln-m-widget-contact {
+  h4 {
+    text-transform: uppercase;
+  }
+
   .address {
     margin: 1em 0 2.4em 0;
   }
