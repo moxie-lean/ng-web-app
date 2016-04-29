@@ -10,5 +10,8 @@ npm-debug.log*
 config/*.local.*
 public/*
 !public/*.html
+!public/*.ico
+!public/img
+!public/fonts
 .idea
 !public/*.ico

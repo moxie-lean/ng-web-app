@@ -1,0 +1,30 @@
+$_phone_prefix: 'T';
+$_email_prefix: 'E';
+
+.ln-m-widget-contact-details {
+  h4 {
+    text-transform: uppercase;
+  }
+
+  .address {
+    margin: 1em 0 2.4em 0;
+  }
+
+  .phone {
+    margin-top: 1em;
+
+    &:before {
+      content: $_phone_prefix;
+      margin-right: 15px;
+    }
+  }
+
+  .email {
+    margin-bottom: 2.4em;
+
+    &:before {
+      content: $_email_prefix;
+      margin-right: 15px;
+    }
+  }
+}

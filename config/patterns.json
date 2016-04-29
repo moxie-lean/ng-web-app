@@ -1,6 +1,8 @@
 {
   "generatePatternsPage": true,
   "customComponentsLocation": "../../app/",
+  "patternsRoute": "#/patterns",
+  "examplesRoute": "#/examples",
   "examplesBackgroundColor": "#FFFFFF",
   "enabledComponents": [
     {
@@ -108,7 +110,7 @@
         {
           "name": "Image",
           "params": {
-            "src": "img/lean.png"
+            "src": "https://avatars1.githubusercontent.com/u/15912467?v=3&s=50"
           }
         }
       ]
@@ -200,6 +202,214 @@
           }
         }
       ]
+    },
+    {
+      "component": "molecules/widget-social-links",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Social networks widget",
+          "params": {
+            "class": "ln-m-widget-social-links",
+            "lnTitle": "",
+            "lnItems": [
+              {
+                "network": "twitter",
+                "link": "//twitter.com/",
+                "new_window": true
+              },
+              {
+                "network": "facebook",
+                "link": "//facebook.com/",
+                "new_window": true
+              },
+              {
+                "network": "linkedin",
+                "link": "//linkedin.com/",
+                "new_window": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "component": "molecules/widget-menu",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Menu widget",
+          "params": {
+            "class": "ln-m-widget-menu",
+            "lnTitle": "Menu",
+            "lnItems": [
+              {
+                "title": "Page 1",
+                "link": "/#/page1"
+              },
+              {
+                "title": "Page 2",
+                "link": "/#/page2"
+              },
+              {
+                "title": "Page 3",
+                "link": "/#/page3"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "component": "molecules/widget-contact-details",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Contact details widget",
+          "params": {
+            "class": "ln-m-widget-contact-details",
+            "lnTitle": "Contact Us",
+            "lnLogo": "https://avatars1.githubusercontent.com/u/15912467?v=3&s=50",
+            "lnAddress": "594 Broadway Suite 305<br>New York, NY 10012",
+            "lnPhone": "(855) 464 8269",
+            "lnEmail": "info@getmoxied.net"
+          }
+        }
+      ]
+    },
+    {
+      "component": "molecules/widget-preview",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Preview widget",
+          "params": {
+            "class": "ln-m-widget-preview",
+            "lnTitle": "Upcoming Events",
+            "lnLeanpreview": {
+              "items": [
+                {
+                  "title": "Event 1",
+                  "description": "Event One",
+                  "button_text": "Read more",
+                  "link": "/#/event1"
+                },
+                {
+                  "title": "Event 2",
+                  "description": "Event Two",
+                  "button_text": "Read more",
+                  "link": "/#/event2",
+                  "new_window": true
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "component": "molecules/widget-downloads",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Downloads widget",
+          "params": {
+            "class": "ln-m-widget-downloads",
+            "lnTitle": "Downloads",
+            "lnLeandownloads": {
+              "items": [
+                {
+                  "title": "Document 1",
+                  "description": "Document One",
+                  "file": {
+                    "url": "http://www.pdf995.com/samples/pdf.pdf"
+                  }
+                },
+                {
+                  "title": "Document 2",
+                  "description": "Document Two",
+                  "file": {
+                    "url": "http://www.pdf995.com/samples/pdf.pdf"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "component": "molecules/widget-recent",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Recent widget",
+          "params": {
+            "class": "ln-m-widget-recent",
+            "lnTitle": "Recent",
+            "lnItems": [
+              {
+                "title": "Post 1",
+                "file": "/#/post1"
+              },
+              {
+                "title": "Post 2",
+                "file": "/#/post2"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "component": "organisms/widgets-area",
+      "custom": false,
+      "examples": [
+        {
+          "name": "Widgets area",
+          "params": {
+            "lnWidgets": [
+              {
+                "type": "lean-menu",
+                "content": {
+                  "title": "Menu",
+                  "items": [
+                    {
+                      "title": "Page 1",
+                      "link": "/#/page1"
+                    },
+                    {
+                      "title": "Page 2",
+                      "link": "/#/page2"
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "lean-social-links",
+                "content": {
+                  "title": "Social",
+                  "items": [
+                    {
+                      "network": "twitter",
+                      "link": "//twitter.com/"
+                    },
+                    {
+                      "network": "facebook",
+                      "link": "//facebook.com/"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "component": "organisms/gravity-form",
+      "custom": false,
+      "examples": []
     }
   ]
 }

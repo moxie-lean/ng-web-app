@@ -1,0 +1,24 @@
+.ln-m-widget-preview {
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  h4 {
+    text-transform: uppercase;
+  }
+
+  h5 {
+    @include fontSize(16.7px);
+    margin: 1em 0 3em;
+  }
+
+  a {
+    display: block;
+    margin-bottom: 3em;
+    position: relative;
+  }
+}

@@ -15,4 +15,4 @@ angular
   ]);
 
 // Dependent on app.
-require('./templates');
+require('./custom/templates');
