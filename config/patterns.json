@@ -204,13 +204,13 @@
       ]
     },
     {
-      "component": "molecules/widget-social",
+      "component": "molecules/widget-social-links",
       "custom": false,
       "examples": [
         {
           "name": "Social networks widget",
           "params": {
-            "class": "ln-m-widget-social",
+            "class": "ln-m-widget-social-links",
             "lnTitle": "",
             "lnItems": [
               {
@@ -261,13 +261,13 @@
       ]
     },
     {
-      "component": "molecules/widget-contact",
+      "component": "molecules/widget-contact-details",
       "custom": false,
       "examples": [
         {
           "name": "Contact details widget",
           "params": {
-            "class": "ln-m-widget-contact",
+            "class": "ln-m-widget-contact-details",
             "lnTitle": "Contact Us",
             "lnLogo": "https://avatars1.githubusercontent.com/u/15912467?v=3&s=50",
             "lnAddress": "594 Broadway Suite 305<br>New York, NY 10012",
