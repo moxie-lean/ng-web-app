@@ -204,6 +204,33 @@
       ]
     },
     {
+      "component": "molecules/admin-bar",
+      "custom": false,
+      "examples": [
+        {
+          "name": "WordPress Admin Bar",
+          "params": {
+            "class": "ln-m-admin-bar",
+            "lnSiteName": "Example.com",
+            "lnUserName": "User",
+            "lnDashboardUrl": "http://example.com/wp-admin",
+            "lnLogoutUrl": "http://example.com/logout",
+            "lnEditPageUrl": "http://example.com/edit",
+            "lnNewItemTypes": [
+              {
+                "name": "Post",
+                "url": "http://example.com/new-post"
+              },
+              {
+                "name": "Page",
+                "url": "http://example.com/new-page"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "component": "molecules/widget-social-links",
       "custom": false,
       "examples": [

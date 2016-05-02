@@ -1,0 +1,79 @@
+$ln_m_admin_bar_height: 32px;
+$ln_m_admin_bar_background: rgba(0,0,0,.75);
+$ln_m_admin_bar_font: 400 13px/32px "Open Sans",sans-serif;
+$ln_m_admin_bar_font_color: #ddd;
+$ln_m_admin_bar_font_hover_color: #fff;
+
+.ln-m-admin-bar {
+  font: $ln_m_admin_bar_font;
+  height: $ln_m_admin_bar_height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 600px;
+  z-index: 99999;
+  background: $ln_m_admin_bar_background;
+
+  .toolbar {
+    ul {
+      margin: 0px;
+      padding: 0px;
+
+      li {
+        list-style: none;
+        position: relative;
+
+        a {
+          padding: 0 8px;
+          color: $ln_m_admin_bar_font_color;
+
+          &:hover {
+            color: $ln_m_admin_bar_font_hover_color;
+          }
+        }
+      }
+    }
+
+    .toolbar-left {
+      li {
+        float: left;
+
+        &:hover > .submenu-wrapper {
+          display: block;
+        }
+      }
+    }
+
+    .toolbar-right {
+      li {
+        float: right;
+      }
+    }
+
+    .submenu-wrapper {
+      background: $ln_m_admin_bar_background;
+      display: none;
+      position: absolute;
+    }
+
+    .menu-label {
+      padding-left: 5px;
+    }
+
+    .menu-icon-new {
+      @extend .icon;
+      @extend .icon-plus;
+    }
+
+    .menu-icon-edit {
+      @extend .icon;
+      @extend .icon-pencil;
+    }
+
+    .menu-icon-home {
+      @extend .icon;
+      @extend .icon-home;
+    }
+  }
+}
