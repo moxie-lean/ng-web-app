@@ -159,3 +159,4 @@ npm run watch
 ```
 
 Watches for changes on all file types and runs their dev task when detected [js, styles and template].
+
