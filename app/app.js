@@ -1,7 +1,7 @@
 import angular from 'angular';
 
 angular
-  .module('app', [
+  .module( 'app', [
     'ngSanitize',
     'templateCache',
     'lnCms',
@@ -16,10 +16,10 @@ function appConfig($locationProvider) {
   $locationProvider.html5Mode(true);
 }
 
-require('../public/js/ngConstants.js');
-require('ln-cms');
-require('ln-filters');
-require('ln-patternlab');
+require( '../public/js/ngConstants.js' );
+require( 'ln-cms' );
+require( 'ln-filters' );
+require( 'ln-patternlab' );
 
 // Dependent on app.
-require('./custom/templates');
+require( './custom/templates' );
