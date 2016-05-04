@@ -1,12 +1,12 @@
 import angular from 'angular';
 
-require('../public/js/ngConstants.js');
-require('ln-cms');
-require('ln-filters');
-require('ln-patternlab');
+require( '../public/js/ngConstants.js' );
+require( 'ln-cms' );
+require( 'ln-filters' );
+require( 'ln-patternlab' );
 
 angular
-  .module('app', [
+  .module( 'app', [
     'ngSanitize',
     'templateCache',
     'lnCms',
@@ -15,4 +15,4 @@ angular
   ]);
 
 // Dependent on app.
-require('./custom/templates');
+require( './custom/templates' );

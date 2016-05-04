@@ -1,1 +1,1 @@
-require('./home');
+require( './home' );
