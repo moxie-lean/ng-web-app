@@ -1,8 +1,8 @@
 {
   "generatePatternsPage": true,
   "customComponentsLocation": "../../app/",
-  "patternsRoute": "#/patterns",
-  "examplesRoute": "#/examples",
+  "patternsRoute": "/patterns",
+  "examplesRoute": "/examples",
   "examplesBackgroundColor": "#FFFFFF",
   "enabledComponents": [
     {
@@ -85,7 +85,7 @@
           "name": "A Link",
           "params": {
             "title": "Link",
-            "href": "#/patterns"
+            "href": "/patterns"
           }
         }
       ]
@@ -177,23 +177,23 @@
             "lnItems": [
               {
                 "title": "Menu 1",
-                "link": "#/page1",
+                "link": "/page1",
                 "new_window": false,
                 "items": []
               },
               {
                 "title": "Menu 2",
-                "link": "#/page2",
+                "link": "/page2",
                 "new_window": false,
                 "items": [
                   {
                     "title": "Submenu 1",
-                    "link": "#/subpage1",
+                    "link": "/subpage1",
                     "new_window": false
                   },
                   {
                     "title": "Submenu 2",
-                    "link": "#/subpage2",
+                    "link": "/subpage2",
                     "new_window": true
                   }
                 ]
@@ -245,15 +245,15 @@
             "lnItems": [
               {
                 "title": "Page 1",
-                "link": "/#/page1"
+                "link": "/page1"
               },
               {
                 "title": "Page 2",
-                "link": "/#/page2"
+                "link": "/page2"
               },
               {
                 "title": "Page 3",
-                "link": "/#/page3"
+                "link": "/page3"
               }
             ]
           }
@@ -292,13 +292,13 @@
                   "title": "Event 1",
                   "description": "Event One",
                   "button_text": "Read more",
-                  "link": "/#/event1"
+                  "link": "/event1"
                 },
                 {
                   "title": "Event 2",
                   "description": "Event Two",
                   "button_text": "Read more",
-                  "link": "/#/event2",
+                  "link": "/event2",
                   "new_window": true
                 }
               ]
@@ -350,11 +350,11 @@
             "lnItems": [
               {
                 "title": "Post 1",
-                "file": "/#/post1"
+                "file": "/post1"
               },
               {
                 "title": "Post 2",
-                "file": "/#/post2"
+                "file": "/post2"
               }
             ]
           }
@@ -376,11 +376,11 @@
                   "items": [
                     {
                       "title": "Page 1",
-                      "link": "/#/page1"
+                      "link": "/page1"
                     },
                     {
                       "title": "Page 2",
-                      "link": "/#/page2"
+                      "link": "/page2"
                     }
                   ]
                 }
