@@ -1,9 +1,12 @@
 {
   "name": "web-app",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An atomic starter project for Leean",
-  "repository": "https://github.com/moxie-leean/web-app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moxie-lean/web-app"
+  },
   "license": "MIT",
   "devDependencies": {
     "aliasify": "^1.9.0",
