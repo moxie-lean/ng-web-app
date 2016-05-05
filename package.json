@@ -1,9 +1,12 @@
 {
   "name": "web-app",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An atomic starter project for Leean",
-  "repository": "https://github.com/moxie-leean/web-app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moxie-lean/web-app"
+  },
   "license": "MIT",
   "devDependencies": {
     "aliasify": "^1.9.0",
@@ -12,6 +15,7 @@
     "babelify": "^7.2.0",
     "bower": "^1.3.1",
     "browser-sync": "^2.11.1",
+    "connect-history-api-fallback": "^1.2.0",
     "browserify": "^13.0.0",
     "browserify-shim": "^3.8.12",
     "eslint": "^1.10.3",
@@ -23,9 +27,9 @@
     "gulp-ng-constant": "^1.1.0",
     "gulp-uglify": "^1.5.3",
     "json-server": "^0.8.8",
-    "ln-cms": "^0.4.6",
+    "ln-cms": "^0.5.1",
     "ln-filters": "^0.4.2",
-    "ln-patternlab": "^0.1.4",
+    "ln-patternlab": "^0.1.5",
     "node-sass": "^3.4.2",
     "npm-run-all": "^1.5.1",
     "onchange": "^2.0.0",
@@ -62,7 +66,7 @@
   "scripts": {
     "set-up": "bower install && mkdir -p public/js public/css public/img && npm run dev",
     "json-server": "json-server --watch config/json/db.json --port 3000 --static ./htdocs",
-    "start": "browser-sync start --port 8000 --server public --files 'public/*.html, public/css/*.css, public/js/*.js'",
+    "start": "node bs.js",
     "ci": "npm run js:ci -s && npm run styles:ci -s",
     "dev": "npm run patterns:build && npm run config:dev && npm run js:dev && npm run styles:dev && npm run templates:dev",
     "staging": "npm run patterns:build && npm run config:staging && npm run js:build && npm run styles:build && npm run templates:build",
