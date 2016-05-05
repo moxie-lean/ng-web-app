@@ -8,12 +8,12 @@ angular
     'lnFilters',
     'lnPatterns'
   ])
-  .config(appConfig);
+  .config( appConfig );
 
 appConfig.$inject = ['$locationProvider'];
 
-function appConfig($locationProvider) {
-  $locationProvider.html5Mode(true);
+function appConfig( $locationProvider ) {
+  $locationProvider.html5Mode( true );
 }
 
 require( '../public/js/ngConstants.js' );
