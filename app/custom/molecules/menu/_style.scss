@@ -1,0 +1,22 @@
+nav[role="navigation"] {
+  ul {
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    background-color: $button_bg;
+    margin-right: 5px;
+    border-radius: 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: $button_hover_bg;
+    }
+  }
+}

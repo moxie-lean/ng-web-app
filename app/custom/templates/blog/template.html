@@ -1,0 +1,29 @@
+<div class="t__blog">
+
+  <header role="banner" mx-o-header
+          mx-menu-items="static.menus.main_menu"
+          mx-template="blog">
+  </header>
+
+  <main role="main">
+
+    <h1>Blog</h1>
+
+    <ol class="blog-list">
+
+      <li ng-repeat="blog in view.data"
+          class="blog-preview"
+          mx-m-blog-preview
+          mx-title="{{blog.title}}"
+          mx-excerpt="{{blog.excerpt}}"
+          mx-date="{{blog.date}}"
+          mx-link="{{blog.link}}">
+      </li>
+
+    </ol>
+
+  </main>
+
+  <footer role="contentinfo" mx-o-footer></footer>
+
+</div>

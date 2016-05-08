@@ -3,6 +3,10 @@
 // The should all start with $_ .
 // (you can delete the example below).
 
+$_lean_pink: #EB5E83;
+$_gray_80: #CCCCCC;
+$_gray_light: #EFEFEF;
+$_charcoal: #585858;
 $_black_pearl: #1E2330;
 $_red: #FF0000;
 
@@ -19,16 +23,23 @@ $body: $_black_pearl;
 // Heading
 $heading: $_black_pearl;
 
+// Header
+$header_bg: $_gray_light;
+$header_border: $_gray_80;
+$header_text: $_charcoal;
+
 // Links
-$link: $_black_pearl;
+$link: $_lean_pink;
 $link_hover: rgba($link, 0.6);
 
 // Buttons
 $button_text: $_black_pearl;
-$button_bg: $_black_pearl;
+$button_bg: $_gray_80;
 $button_hover_text: $_black_pearl;
-$button_hover_bg: $_black_pearl;
+$button_hover_bg: rgba($_gray_80, 0.6);
 
+// Borders
+$border: $_gray_80;
 
 // Form
 $form_error: $_red;

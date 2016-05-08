@@ -1,0 +1,11 @@
+footer[role="contentinfo"] {
+  padding: 5px 20px;
+  background-color: $header_bg;
+  border-top: 1px solid $header_border;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 80%;
+  text-align: center;
+}
