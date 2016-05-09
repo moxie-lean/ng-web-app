@@ -1,6 +1,6 @@
 angular
-  .module('app')
-  .directive('mxOHeader', mxOHeader);
+  .module( 'app' )
+  .directive( 'mxOHeader', mxOHeader );
 
 function mxOHeader() {
   return {

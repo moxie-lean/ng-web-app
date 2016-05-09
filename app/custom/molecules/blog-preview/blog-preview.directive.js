@@ -1,6 +1,6 @@
 angular
-  .module('app')
-  .directive('mxMBlogPreview', mxMBlogPreview);
+  .module( 'app' )
+  .directive( 'mxMBlogPreview', mxMBlogPreview );
 
 function mxMBlogPreview() {
   return {
