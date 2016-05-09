@@ -214,16 +214,17 @@
             "lnSiteName": "Example.com",
             "lnUserName": "User",
             "lnDashboardUrl": "http://example.com/wp-admin",
-            "lnLogoutUrl": "http://example.com/logout",
+            "lnLogoutUrl": "http://example.com/wp-login.php?action=logout",
             "lnEditPageUrl": "http://example.com/edit",
+            "lnCurrentPostId": 1,
             "lnNewItemTypes": [
               {
                 "name": "Post",
-                "url": "http://example.com/new-post"
+                "url": "http://example.com/wp-admin/post-new.php?post_type=post"
               },
               {
                 "name": "Page",
-                "url": "http://example.com/new-page"
+                "url": "http://example.com/wp-admin/post-new.php?post_type=page"
               }
             ]
           }
