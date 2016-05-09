@@ -1,11 +1,11 @@
-nav[role="navigation"] {
+nav[role='navigation'] {
   ul {
     margin: 0;
   }
 
   li {
-    list-style: none;
     display: inline-block;
+    list-style: none;
     padding: 10px;
     background-color: $button_bg;
     margin-right: 5px;

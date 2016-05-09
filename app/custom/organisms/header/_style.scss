@@ -1,10 +1,10 @@
-header[role="banner"] {
+header[role='banner'] {
   padding: 20px;
   background-color: $header_bg;
   border-bottom: 1px solid $header_border;
   position: relative;
 
-  nav[role="navigation"] {
+  nav[role='navigation'] {
     float: right;
   }
 }
