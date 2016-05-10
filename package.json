@@ -1,8 +1,8 @@
 {
   "name": "web-app",
   "private": true,
-  "version": "0.1.1",
-  "description": "An atomic starter project for Leean",
+  "version": "0.1.2",
+  "description": "An atomic starter project for Lean",
   "repository": {
     "type": "git",
     "url": "https://github.com/moxie-lean/web-app"
@@ -56,11 +56,10 @@
   "aliasify": {
     "aliases": {
       "atoms": "./app/atoms",
-      "molecules": "./app/molecules",
-      "organisms": "./app/organisms",
-      "template": "./app/templates",
-      "components": "./app/components",
-      "default-link": "ln-cms/default-link"
+      "molecules": "./app/custom/molecules",
+      "organisms": "./app/custom/organisms",
+      "template": "./app/custom/templates",
+      "components": "./app/custom/components"
     }
   },
   "scripts": {

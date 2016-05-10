@@ -1,0 +1,12 @@
+.a__template-name {
+  font-size: 80%;
+  color: $header_text;
+  position: absolute;
+  right: 0;
+  bottom: -26px;
+  background: $header_bg;
+  padding: 3px 20px 0 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom: 1px solid $header_border;
+  border-left: 1px solid $header_border;
+}
