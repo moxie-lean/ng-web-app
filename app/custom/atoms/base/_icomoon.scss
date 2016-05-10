@@ -11,7 +11,7 @@ $icons_id: '9rc3go';
   font-style: normal;
 }
 
-.icon {
+%icon {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon';
   speak: none;
@@ -26,7 +26,7 @@ $icons_id: '9rc3go';
 }
 
 [class^='icon-'], [class*=' icon-'] {
-  @extend .icon;
+  @extend %icon;
 }
 
 // Assign classes to the icons

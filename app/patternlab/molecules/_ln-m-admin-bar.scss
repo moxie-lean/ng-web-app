@@ -1,8 +1,8 @@
 $ln_m_admin_bar_height: 32px;
-$ln_m_admin_bar_background: rgba(0,0,0,.75);
-$ln_m_admin_bar_font: 400 13px/32px "Open Sans",sans-serif;
-$ln_m_admin_bar_font_color: #ddd;
-$ln_m_admin_bar_font_hover_color: #fff;
+$ln_m_admin_bar_background: rgba(0, 0, 0, .75);
+$ln_m_admin_bar_font: 400 13px/32px 'Open Sans', sans-serif;
+$ln_m_admin_bar_font_color: #DDD;
+$ln_m_admin_bar_font_hover_color: #FFF;
 
 .ln-m-admin-bar {
   font: $ln_m_admin_bar_font;
@@ -17,8 +17,8 @@ $ln_m_admin_bar_font_hover_color: #fff;
 
   .toolbar {
     ul {
-      margin: 0px;
-      padding: 0px;
+      margin: 0;
+      padding: 0;
 
       li {
         list-style: none;
@@ -52,28 +52,28 @@ $ln_m_admin_bar_font_hover_color: #fff;
     }
 
     .submenu-wrapper {
-      background: $ln_m_admin_bar_background;
       display: none;
       position: absolute;
+      background: $ln_m_admin_bar_background;
     }
 
     .menu-label {
       padding-left: 5px;
     }
 
-    .menu-icon-new {
-      @extend .icon;
-      @extend .icon-plus;
+    .menu-icon-new:before {
+      @extend %icon;
+      content: '\e906';
     }
 
-    .menu-icon-edit {
-      @extend .icon;
-      @extend .icon-pencil;
+    .menu-icon-edit:before {
+      @extend %icon;
+      content: '\e905';
     }
 
-    .menu-icon-home {
-      @extend .icon;
-      @extend .icon-home;
+    .menu-icon-home:before {
+      @extend %icon;
+      content: '\e904';
     }
   }
 }
