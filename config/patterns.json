@@ -204,6 +204,34 @@
       ]
     },
     {
+      "component": "molecules/admin-bar",
+      "custom": false,
+      "examples": [
+        {
+          "name": "WordPress Admin Bar",
+          "params": {
+            "class": "ln-m-admin-bar",
+            "lnSiteName": "Example.com",
+            "lnUserName": "User",
+            "lnDashboardUrl": "http://example.com/wp-admin",
+            "lnLogoutUrl": "http://example.com/wp-login.php?action=logout",
+            "lnEditPageUrl": "http://example.com/edit",
+            "lnCurrentPostId": 1,
+            "lnNewItemTypes": [
+              {
+                "name": "Post",
+                "url": "http://example.com/wp-admin/post-new.php?post_type=post"
+              },
+              {
+                "name": "Page",
+                "url": "http://example.com/wp-admin/post-new.php?post_type=page"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "component": "molecules/widget-social-links",
       "custom": false,
       "examples": [

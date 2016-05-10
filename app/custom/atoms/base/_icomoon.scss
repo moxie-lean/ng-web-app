@@ -11,7 +11,7 @@ $icons_id: '9rc3go';
   font-style: normal;
 }
 
-[class^='icon-'], [class*=' icon-'] {
+%icon {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon';
   speak: none;
@@ -25,6 +25,10 @@ $icons_id: '9rc3go';
   -moz-osx-font-smoothing: grayscale;
 }
 
+[class^='icon-'], [class*=' icon-'] {
+  @extend %icon;
+}
+
 // Assign classes to the icons
 // (you can delete the example below)
 
@@ -33,13 +37,25 @@ $icons_id: '9rc3go';
 }
 
 .icon-twitter:before {
-  content: '\e90e';
+  content: '\e911';
 }
 
 .icon-facebook:before {
-  content: '\e909';
+  content: '\e90c';
 }
 
 .icon-linkedin:before {
-  content: '\e90a';
+  content: '\e90d';
+}
+
+.icon-pencil:before {
+  content: '\e905';
+}
+
+.icon-plus:before {
+  content: '\e906';
+}
+
+.icon-home:before {
+  content: '\e904';
 }
