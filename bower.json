@@ -1,8 +1,8 @@
 {
-  "name": "leean-angular",
-  "description": "A starter project for Leean",
+  "name": "lean-angular",
+  "description": "A starter project for Lean",
   "version": "0.1.0",
-  "homepage": "https://github.com/moxie-leean/leean-angular",
+  "homepage": "https://github.com/moxie-lean/ng-web-app",
   "license": "MIT",
   "private": true,
   "dependencies": {
