@@ -2,18 +2,26 @@ import angular from 'angular';
 
 angular
   .module( 'app', [
+    'ngConstants',
     'ngSanitize',
     'templateCache',
     'lnCms',
     'lnFilters',
     'lnPatterns'
   ])
-  .config( appConfig );
+  .config( appConfig )
+  .run( appRun );
 
 appConfig.$inject = ['$locationProvider'];
 
 function appConfig( $locationProvider ) {
   $locationProvider.html5Mode( true );
+}
+
+appRun.$inject = ['lnMAdminBarService', 'apiBase'];
+
+function appRun( lnMAdminBarService, apiBase ) {
+  lnMAdminBarService.setApiUrl( `${apiBase}admin-bar` );
 }
 
 require( '../public/js/ngConstants.js' );

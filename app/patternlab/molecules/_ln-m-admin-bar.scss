@@ -1,0 +1,79 @@
+$ln_m_admin_bar_height: 32px;
+$ln_m_admin_bar_background: rgba(0, 0, 0, .75);
+$ln_m_admin_bar_font: 400 13px/32px 'Open Sans', sans-serif;
+$ln_m_admin_bar_font_color: #DDD;
+$ln_m_admin_bar_font_hover_color: #FFF;
+
+.ln-m-admin-bar {
+  font: $ln_m_admin_bar_font;
+  height: $ln_m_admin_bar_height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 600px;
+  z-index: 99999;
+  background: $ln_m_admin_bar_background;
+
+  .toolbar {
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+        position: relative;
+
+        a {
+          padding: 0 8px;
+          color: $ln_m_admin_bar_font_color;
+
+          &:hover {
+            color: $ln_m_admin_bar_font_hover_color;
+          }
+        }
+      }
+    }
+
+    .toolbar-left {
+      li {
+        float: left;
+
+        &:hover > .submenu-wrapper {
+          display: block;
+        }
+      }
+    }
+
+    .toolbar-right {
+      li {
+        float: right;
+      }
+    }
+
+    .submenu-wrapper {
+      display: none;
+      position: absolute;
+      background: $ln_m_admin_bar_background;
+    }
+
+    .menu-label {
+      padding-left: 5px;
+    }
+
+    .menu-icon-new:before {
+      @extend %icon;
+      content: '\e906';
+    }
+
+    .menu-icon-edit:before {
+      @extend %icon;
+      content: '\e905';
+    }
+
+    .menu-icon-home:before {
+      @extend %icon;
+      content: '\e904';
+    }
+  }
+}
