@@ -28,10 +28,10 @@
 ## Getting Started
 
 ### Clone the repo
-To start a new project without the moxie-lean/web-app commit history you can run:
+To start a new project without the moxie-lean/ng-web-app commit history you can run:
 
 ```
-git clone --depth=1 git@github.com:moxie-lean/web-app.git <your-project-name>
+git clone --depth=1 git@github.com:moxie-lean/ng-web-app.git <your-project-name>
 ```
 
 The depth=1 tells git to only pull down one commit worth of historical data.
