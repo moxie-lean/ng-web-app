@@ -5,11 +5,11 @@
           mx-template="home">
   </header>
 
-  <main role="main">
+  <main role="main" ng-repeat="post in view">
 
-    <h1 ng-bind-html="view.content.title"></h1>
+    <h1 ng-bind-html="post.title.rendered"></h1>
 
-    <div ng-bind-html="view.content.content"></div>
+    <div ng-bind-html="post.content.rendered"></div>
 
   </main>
 

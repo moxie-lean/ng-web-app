@@ -11,13 +11,13 @@
 
     <ol class="blog-list">
 
-      <li ng-repeat="blog in view.data"
+      <li ng-repeat="post in view"
           class="blog-preview"
           mx-m-blog-preview
-          mx-title="{{blog.title}}"
-          mx-excerpt="{{blog.excerpt}}"
-          mx-date="{{blog.date}}"
-          mx-link="{{blog.link}}">
+          mx-title="{{post.title.rendered}}"
+          mx-excerpt="{{post.excerpt.rendered}}"
+          mx-date="{{post.date}}"
+          mx-link="{{post.link}}">
       </li>
 
     </ol>

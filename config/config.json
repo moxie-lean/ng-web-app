@@ -1,11 +1,23 @@
 {
   "production": {
-    "apiBase": "https://api.XXXXX.com/"
+    "apiEndpoints": {
+      "routes": "http://admin.XXXXX.com/wp-json/lean/v2/routes",
+      "static": "http://admin.XXXXX.com/wp-json/lean/v2/static",
+      "adminBar": "http://admin.XXXXX.com/wp-json/lean/v2/admin-bar"
+    }
   },
   "staging": {
-    "apiBase": "http://api.XXXXX.moxie-staging.com/"
+    "apiEndpoints": {
+      "routes": "http://admin.XXXXX.moxie-staging.com/wp-json/lean/v2/routes",
+      "static": "http://admin.XXXXX.moxie-staging.com/wp-json/lean/v2/static",
+      "adminBar": "http://admin.XXXXX.moxie-staging.com/wp-json/lean/v2/admin-bar"
+    }
   },
   "dev": {
-    "apiBase": "http://localhost:3000/"
+    "apiEndpoints": {
+      "routes": "http://example.dev/wp-json/lean/v2/routes",
+      "static": "http://example.dev/wp-json/lean/v2/static",
+      "adminBar": "http://example.dev/wp-json/lean/v2/admin-bar"
+    }
   }
 }

@@ -12,16 +12,18 @@ angular
   .config( appConfig )
   .run( appRun );
 
-appConfig.$inject = ['$locationProvider'];
+appConfig.$inject = ['$locationProvider', 'lnCmsConfigProvider', 'apiEndpoints'];
 
-function appConfig( $locationProvider ) {
+function appConfig( $locationProvider, lnCmsConfigProvider, apiEndpoints ) {
   $locationProvider.html5Mode( true );
+
+  lnCmsConfigProvider.setConfig({ endpoints: apiEndpoints });
 }
 
-appRun.$inject = ['lnMAdminBarService', 'apiBase'];
+appRun.$inject = ['lnMAdminBarService', 'apiEndpoints'];
 
-function appRun( lnMAdminBarService, apiBase ) {
-  lnMAdminBarService.setApiUrl( `${apiBase}admin-bar` );
+function appRun( lnMAdminBarService, apiEndpoints ) {
+  lnMAdminBarService.setApiUrl( apiEndpoints.adminBar );
 }
 
 require( '../public/js/ngConstants.js' );
