@@ -12,16 +12,36 @@ angular
   .config( appConfig )
   .run( appRun );
 
-appConfig.$inject = ['$locationProvider'];
+appConfig.$inject = ['$locationProvider', 'lnCmsConfigProvider', 'lnApi'];
 
-function appConfig( $locationProvider ) {
+function appConfig( $locationProvider, lnCmsConfigProvider, lnApi ) {
   $locationProvider.html5Mode( true );
+
+  lnCmsConfigProvider.setConfig(
+    { endpoints: getEndpoints( lnApi.base, lnApi.endpoints ) }
+  );
 }
 
-appRun.$inject = ['lnMAdminBarService', 'apiBase'];
+appRun.$inject = ['lnMAdminBarService', 'lnApi'];
 
-function appRun( lnMAdminBarService, apiBase ) {
-  lnMAdminBarService.setApiUrl( `${apiBase}admin-bar` );
+function appRun( lnMAdminBarService, lnApi ) {
+  lnMAdminBarService.setApiUrl(
+    getEndpoints( lnApi.base, lnApi.endpoints ).adminBar
+  );
+}
+
+function getEndpoints( apiBase, apiEndpoints ) {
+  var resolvedEndpoints = apiEndpoints;
+
+  function resolveEndpoint( endpoint, name ) {
+    resolvedEndpoints[name] = endpoint.replace( '{API_BASE}', apiBase );
+  }
+
+  if ( angular.isDefined( apiBase ) && '' !== apiBase ) {
+    angular.forEach( apiEndpoints, resolveEndpoint );
+  }
+
+  return resolvedEndpoints;
 }
 
 require( '../public/js/ngConstants.js' );

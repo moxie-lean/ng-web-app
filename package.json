@@ -1,7 +1,7 @@
 {
   "name": "web-app",
   "private": true,
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "An atomic starter project for Lean",
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
     "gulp-ng-constant": "^1.1.0",
     "gulp-uglify": "^1.5.3",
     "json-server": "^0.8.8",
-    "ln-cms": "^0.6.0",
+    "ln-cms": "^1.0.0",
     "ln-filters": "^0.4.3",
     "ln-patternlab": "^0.1.6",
     "node-sass": "^3.4.2",

@@ -1,11 +1,32 @@
 {
   "production": {
-    "apiBase": "https://api.XXXXX.com/"
+    "lnApi": {
+      "base": "https://admin.XXXXX.com/wp-json/lean/v2/",
+      "endpoints": {
+        "routes": "{API_BASE}routes",
+        "static": "{API_BASE}static",
+        "adminBar": "{API_BASE}admin-bar"
+      }
+    }
   },
   "staging": {
-    "apiBase": "http://api.XXXXX.moxie-staging.com/"
+    "lnApi": {
+      "base": "http://admin.XXXXX.moxie-staging.com/wp-json/lean/v2/",
+      "endpoints": {
+        "routes": "{API_BASE}routes",
+        "static": "{API_BASE}static",
+        "adminBar": "{API_BASE}admin-bar"
+      }
+    }
   },
   "dev": {
-    "apiBase": "http://localhost:3000/"
+    "lnApi": {
+      "base": "http://admin.XXXXX.moxie-staging.com/wp-json/lean/v2/",
+      "endpoints": {
+        "routes": "{API_BASE}routes",
+        "static": "{API_BASE}static",
+        "adminBar": "{API_BASE}admin-bar"
+      }
+    }
   }
 }
