@@ -12,18 +12,36 @@ angular
   .config( appConfig )
   .run( appRun );
 
-appConfig.$inject = ['$locationProvider', 'lnCmsConfigProvider', 'apiEndpoints'];
+appConfig.$inject = ['$locationProvider', 'lnCmsConfigProvider', 'lnApi'];
 
-function appConfig( $locationProvider, lnCmsConfigProvider, apiEndpoints ) {
+function appConfig( $locationProvider, lnCmsConfigProvider, lnApi ) {
   $locationProvider.html5Mode( true );
 
-  lnCmsConfigProvider.setConfig({ endpoints: apiEndpoints });
+  lnCmsConfigProvider.setConfig(
+    { endpoints: getEndpoints( lnApi.base, lnApi.endpoints ) }
+  );
 }
 
-appRun.$inject = ['lnMAdminBarService', 'apiEndpoints'];
+appRun.$inject = ['lnMAdminBarService', 'lnApi'];
 
-function appRun( lnMAdminBarService, apiEndpoints ) {
-  lnMAdminBarService.setApiUrl( apiEndpoints.adminBar );
+function appRun( lnMAdminBarService, lnApi ) {
+  lnMAdminBarService.setApiUrl(
+    getEndpoints( lnApi.base, lnApi.endpoints ).adminBar
+  );
+}
+
+function getEndpoints( apiBase, apiEndpoints ) {
+  var resolvedEndpoints = apiEndpoints;
+
+  function resolveEndpoint( endpoint, name ) {
+    resolvedEndpoints[name] = endpoint.replace( '{API_BASE}', apiBase );
+  }
+
+  if ( angular.isDefined( apiBase ) && '' !== apiBase ) {
+    angular.forEach( apiEndpoints, resolveEndpoint );
+  }
+
+  return resolvedEndpoints;
 }
 
 require( '../public/js/ngConstants.js' );
