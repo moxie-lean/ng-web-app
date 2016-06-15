@@ -10,7 +10,7 @@ function mxMBlogPreview() {
       mxTitle: '@',
       mxExcerpt: '@',
       mxDate: '@',
-      mxLink: '@'
-    }
+      mxLink: '@',
+    },
   };
 }

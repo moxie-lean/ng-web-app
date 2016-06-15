@@ -7,7 +7,7 @@ angular
     'templateCache',
     'lnCms',
     'lnFilters',
-    'lnPatterns'
+    'lnPatterns',
   ])
   .config( appConfig )
   .run( appRun );
