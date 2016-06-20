@@ -22,12 +22,26 @@ function appConfig( $locationProvider, lnCmsConfigProvider, lnApi ) {
   );
 }
 
-appRun.$inject = ['lnMAdminBarService', 'lnApi'];
+appRun.$inject = ['lnOGravityFormService', 'lnCmsClientService', '$log',
+  'lnMAdminBarService', 'lnApi'];
 
-function appRun( lnMAdminBarService, lnApi ) {
+function appRun( lnOGravityFormService, lnCmsClientService, $log,
+  lnMAdminBarService, lnApi ) {
   lnMAdminBarService.setApiUrl(
     getEndpoints( lnApi.base, lnApi.endpoints ).adminBar
   );
+
+  lnCmsClientService
+    .getStatic()
+    .then( function response( response ) {
+      if ( response.data.hasOwnProperty( 'gravity_forms' ) ) {
+        lnOGravityFormService.setConfig( response.data.gravity_forms );
+      } else {
+        $log.error( 'Run -> No data available for lnOGravityForm', response );
+      }
+    }, function error( error ) {
+      $log.error( error );
+    });
 }
 
 function getEndpoints( apiBase, apiEndpoints ) {
