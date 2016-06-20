@@ -78,7 +78,7 @@
     "js:watch": "gulp js:watch",
     "styles": "npm run styles:dev",
     "styles:ci": "sass-lint app/\\*\\*/\\*.scss -v -q",
-    "styles:dev": "node-sass app/style.scss -o public/css/ --source-map-embed && npm run styles:autoprefix",
+    "styles:dev": "node-sass app/style.scss -o public/css/ --source-map-embed",
     "styles:build": "node-sass app/style.scss --output-style compressed -o public/css/ && npm run styles:autoprefix",
     "styles:watch": "onchange app/\\*\\*/\\*.scss -- npm run styles:dev",
     "styles:autoprefix": "postcss -u autoprefixer -r public/css/style.css",
