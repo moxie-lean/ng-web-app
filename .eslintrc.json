@@ -33,6 +33,7 @@
     "space-after-keywords": 2,
     "one-var": [2, "never"],
     "comma-style": [2, "last"],
+    "comma-dangle": [2, "always-multiline"],
     "camelcase": [
       2,
       {

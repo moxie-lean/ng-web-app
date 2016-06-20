@@ -8,7 +8,7 @@ function mxOHeader() {
     templateUrl: 'organisms/header/template.html',
     scope: {
       mxMenuItems: '<',
-      mxTemplate: '@'
-    }
+      mxTemplate: '@',
+    },
   };
 }

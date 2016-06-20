@@ -49,23 +49,22 @@ gulp.task('js:build', function() {
   return browserify(projectPath + 'app.js', {
     debug: false
   })
-    .transform(babelify)
-    .bundle()
-    .pipe(source('bundle.js'))
-    .pipe(buffer())
-    .pipe(ngAnnotate())
-    .pipe(uglify())
-    .pipe(gulp.dest(outputPath + 'js'));
+  .transform(babelify)
+  .bundle()
+  .pipe(source('bundle.js'))
+  .pipe(buffer())
+  .pipe(ngAnnotate())
+  .pipe(uglify())
+  .pipe(gulp.dest(outputPath + 'js'));
 });
 
 gulp.task('js:dev', function() {
   return browserify(projectPath + 'app.js', {
     debug: true
   })
-    .transform(babelify)
-    .bundle()
-    .pipe(source('bundle.js'))
-    .pipe(gulp.dest(outputPath + 'js'));
+  .bundle()
+  .pipe(source('bundle.js'))
+  .pipe(gulp.dest(outputPath + 'js'));
 });
 
 gulp.task('js:watch', [], function() {
@@ -77,19 +76,18 @@ gulp.task('js:watch', [], function() {
     cache: {},
     packageCache: {}
   })
-    .transform('babelify');
 
   var rebundle = function() {
     var startDate = new Date();
     return bundler.bundle(function(err, buf) {
-        if (err) {
-          console.log('JS error: ' + err.toString());
-        } else {
-          console.log('JS bundle updated in ' + (new Date().getTime() - startDate.getTime()) + ' ms');
-        }
-      })
-      .pipe(source('bundle.js'))
-      .pipe(gulp.dest(outputPath + 'js'));
+      if (err) {
+        console.log('JS error: ' + err.toString());
+      } else {
+        console.log('JS bundle updated in ' + (new Date().getTime() - startDate.getTime()) + ' ms');
+      }
+    })
+    .pipe(source('bundle.js'))
+    .pipe(gulp.dest(outputPath + 'js'));
   };
 
   bundler.plugin(watchify);
@@ -121,7 +119,7 @@ var configFunc = function(env) {
     constants: envConfig,
     stream: true
   })
-    .pipe(gulp.dest(outputPath + 'js'));
+  .pipe(gulp.dest(outputPath + 'js'));
 };
 
 gulp.task('config:dev', configFunc.bind(this, 'dev'));
