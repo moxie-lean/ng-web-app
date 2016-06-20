@@ -38,7 +38,7 @@ rules:
     -
       properties:
         - color
-  quote:
+  quotes:
     - 2
     -
       style: single
