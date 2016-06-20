@@ -5,6 +5,6 @@ angular
 function mxOFooter() {
   return {
     restrict: 'A',
-    templateUrl: 'organisms/footer/template.html'
+    templateUrl: 'organisms/footer/template.html',
   };
 }
