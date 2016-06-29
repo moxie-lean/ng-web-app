@@ -20,32 +20,35 @@ angular
 
 appAnimation.$inject = ['$rootScope', '$state'];
 
-function appAnimation($rootScope, $state) {
-  function resetTweenProps(element, done) {
+function appAnimation( $rootScope, $state ) {
+  function resetTweenProps( element, done ) {
     //this is needed to make fixed elements work after the animations
-    TweenMax.set(element, {clearProps: 'all'});
+    TweenMax.set( element, {
+      clearProps: 'all',
+    });
+
     done();
   }
 
   return {
-    enter: function(element, done) {
-      if ($state.current.name === 'loading') {
-        TweenMax.from(element, 1, {
+    enter: function enter( element, done ) {
+      if ( $state.current.name === 'loading' ) {
+        TweenMax.from( element, 1, {
           opacity: 0,
-          onComplete: function() {
-            resetTweenProps(element, done);
-          }
+          onComplete: function complete() {
+            resetTweenProps( element, done );
+          },
         });
       } else {
-        TweenMax.from(element, 1, {
+        TweenMax.from( element, 1, {
           opacity: 0,
           y: '-100',
-          onComplete: function() {
-            resetTweenProps(element, done);
-          }
+          onComplete: function complete() {
+            resetTweenProps( element, done );
+          },
         });
       }
-    }
+    },
   };
 }
 
