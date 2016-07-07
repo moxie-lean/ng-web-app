@@ -6,10 +6,9 @@
     margin-right: flex-gutter();
   }
   $has-n: str-index(#{$nth}, 'n');
+  $next: #{$nth + 'n'} + 1;
   @if $has-n != null {
     $next: #{$nth} + 1;
-  } @else {
-    $next: #{$nth + 'n'} + 1;
   }
 
   &:nth-child(#{$next}) {
