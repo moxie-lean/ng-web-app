@@ -30,24 +30,24 @@ function appAnimation( $rootScope, $state ) {
     done();
   }
 
+  function getTweenOptions( element, done ) {
+    var options = {
+      opacity: 0,
+      onComplete: function complete() {
+        resetTweenProps( element, done );
+      },
+    };
+
+    if ( $state.current.name !== 'loading' ) {
+      options.y = '-100';
+    }
+
+    return options;
+  }
+
   return {
     enter: function enter( element, done ) {
-      if ( $state.current.name === 'loading' ) {
-        TweenMax.from( element, 1, {
-          opacity: 0,
-          onComplete: function complete() {
-            resetTweenProps( element, done );
-          },
-        });
-      } else {
-        TweenMax.from( element, 1, {
-          opacity: 0,
-          y: '-100',
-          onComplete: function complete() {
-            resetTweenProps( element, done );
-          },
-        });
-      }
+      TweenMax.from( element, 1, getTweenOptions( element, done ) );
     },
   };
 }
