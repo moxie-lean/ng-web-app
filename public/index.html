@@ -26,9 +26,7 @@
         your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="loading-overlay" ng-if="vm.isLoading">
-      <div class="loader">Loading...</div>
-    </div>
+    <ln-cms-loader ng-if="vm.isLoading"></ln-cms-loader>
 
     <ln-cms-view view-class="view-content">
     </ln-cms-view>
