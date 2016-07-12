@@ -94,7 +94,8 @@
     "amd": true
   },
   "globals": {
-    "angular": 1
+    "angular": 1,
+    "TweenMax": 1
   },
   "extends": "eslint:recommended",
   "ecmaFeatures": {

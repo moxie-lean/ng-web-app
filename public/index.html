@@ -26,10 +26,17 @@
         your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <ln-cms-view view-def="{{vm.view}}" static-def="{{vm.static}}"></ln-cms-view>
+    <ln-cms-view 
+      view-def="{{vm.view}}" 
+      static-def="{{vm.static}}" 
+      view-class="view-content" 
+      enable-loading-state="true">
+    </ln-cms-view>
 
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js" defer></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-sanitize.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.min.js"></script>
     <script src="js/bundle.js"></script>
     <script src="js/templates.js"></script>
 

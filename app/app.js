@@ -4,13 +4,57 @@ angular
   .module( 'app', [
     'ngConstants',
     'ngSanitize',
+    'ngAnimate',
     'templateCache',
     'lnCms',
     'lnFilters',
     'lnPatterns',
   ])
+  .animation( '.view-content', appAnimation )
   .config( appConfig )
   .run( appRun );
+
+//
+// ANIMATION
+//
+
+appAnimation.$inject = ['$rootScope', '$state'];
+
+function appAnimation( $rootScope, $state ) {
+  function resetTweenProps( element, done ) {
+    //this is needed to make fixed elements work after the animations
+    TweenMax.set( element, {
+      clearProps: 'all',
+    });
+
+    done();
+  }
+
+  function getTweenOptions( element, done ) {
+    var options = {
+      opacity: 0,
+      onComplete: function complete() {
+        resetTweenProps( element, done );
+      },
+    };
+
+    if ( $state.current.name !== 'loading' ) {
+      options.y = '-100';
+    }
+
+    return options;
+  }
+
+  return {
+    enter: function enter( element, done ) {
+      TweenMax.from( element, 1, getTweenOptions( element, done ) );
+    },
+  };
+}
+
+//
+// CONFIG
+//
 
 appConfig.$inject = ['$locationProvider', 'lnCmsConfigProvider', 'lnApi'];
 
@@ -21,6 +65,10 @@ function appConfig( $locationProvider, lnCmsConfigProvider, lnApi ) {
     { endpoints: getEndpoints( lnApi.base, lnApi.endpoints ) }
   );
 }
+
+//
+// RUN
+//
 
 appRun.$inject = ['lnMAdminBarService', 'lnApi'];
 
@@ -44,10 +92,12 @@ function getEndpoints( apiBase, apiEndpoints ) {
   return resolvedEndpoints;
 }
 
+//
+// DEPENDENCIES
+//
+
 require( '../public/js/ngConstants.js' );
 require( 'ln-cms' );
 require( 'ln-filters' );
 require( 'ln-patternlab' );
-
-// Dependent on app.
 require( './custom/templates' );
