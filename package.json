@@ -27,7 +27,7 @@
     "gulp-ng-constant": "^1.1.0",
     "gulp-uglify": "^1.5.3",
     "json-server": "^0.8.8",
-    "ln-cms": "^1.1.0",
+    "ln-cms": "git@github.com:moxie-lean/ng-cms.git#2.0.0",
     "ln-filters": "^0.4.5",
     "ln-patternlab": "^0.2.1",
     "node-sass": "^3.4.2",
