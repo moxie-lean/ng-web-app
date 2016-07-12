@@ -28,3 +28,7 @@ body {
   @include outer-container;
   max-width: 100%;
 }
+
+.view-content {
+  min-height: 100vh;
+}
