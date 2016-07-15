@@ -1,7 +1,7 @@
 <div class="t__blog">
 
   <header role="banner" mx-o-header
-          mx-menu-items="static.menus.main_menu"
+          mx-menu-items="vm.static.menus.main_menu"
           mx-template="blog">
   </header>
 
@@ -11,7 +11,7 @@
 
     <ol class="blog-list">
 
-      <li ng-repeat="post in view"
+      <li ng-repeat="post in vm.view"
           class="blog-preview"
           mx-m-blog-preview
           mx-title="{{post.title.rendered}}"

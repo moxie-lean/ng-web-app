@@ -101,3 +101,4 @@ require( 'ln-cms' );
 require( 'ln-filters' );
 require( 'ln-patternlab' );
 require( './custom/templates' );
+require( 'organisms/loader/loader.directive' );
