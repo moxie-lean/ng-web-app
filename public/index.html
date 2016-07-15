@@ -18,19 +18,17 @@
 
     <!-- styles inclusion -->
     <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+    <body data-has-loader="true">
+    </head>
 
     <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
         your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <ln-cms-view 
-      view-def="{{vm.view}}" 
-      static-def="{{vm.static}}" 
-      view-class="view-content" 
-      enable-loading-state="true">
+    <ln-cms-loader ng-if="vm.isLoading"></ln-cms-loader>
+
+    <ln-cms-view view-class="view-content">
     </ln-cms-view>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js" defer></script>

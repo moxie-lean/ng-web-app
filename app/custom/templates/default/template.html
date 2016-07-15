@@ -1,11 +1,11 @@
 <div class="t__default">
 
   <header role="banner" mx-o-header
-          mx-menu-items="static.menus.main_menu"
+          mx-menu-items="vm.static.menus.main_menu"
           mx-template="default">
   </header>
 
-  <main role="main" ng-repeat="post in view">
+  <main role="main" ng-repeat="post in vm.view">
 
     <h1 ng-bind-html="post.title.rendered"></h1>
 
